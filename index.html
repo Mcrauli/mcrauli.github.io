@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#020617">
+<meta name="description" content="Lauri Rekola — kylmälaitesuunnittelija ja kehittäjä. Python-pohjainen BIM-konvertteri, AutoCAD LISP -työkalut ja staattiset web-sivustot kylmälaitesuunnittelun arkityöhön.">
+<meta name="author" content="Lauri Rekola">
+
+<meta property="og:title" content="Lauri Rekola · Portfolio">
+<meta property="og:description" content="Kylmälaitesuunnittelija ja kehittäjä. Python BIM-konvertteri, AutoCAD LISP -työkalut ja web-sivustot.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mcrauli.github.io/">
+
+<title>Lauri Rekola · Portfolio</title>
+
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=1">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://mcrauli.github.io/#lauri",
+      "name": "Lauri Rekola",
+      "jobTitle": "Kylmälaitesuunnittelija ja kehittäjä",
+      "email": "mailto:laurirekola@icloud.com",
+      "url": "https://mcrauli.github.io/",
+      "sameAs": [
+        "https://github.com/Mcrauli"
+      ],
+      "knowsAbout": [
+        "Kylmälaitesuunnittelu",
+        "BIM",
+        "IFC4",
+        "AutoCAD",
+        "Python",
+        "TypeScript",
+        "AutoCAD LISP"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "url": "https://mcrauli.github.io/",
+      "name": "Lauri Rekola · Portfolio",
+      "inLanguage": "fi",
+      "author": { "@id": "https://mcrauli.github.io/#lauri" }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<nav class="topnav">
+  <a class="brand" href="#top">
+    <span class="brand-icon">LR</span>
+    <span class="brand-text">Lauri Rekola</span>
+  </a>
+  <div class="topnav-links">
+    <a href="#tyot">Työt</a>
+    <a href="#tausta">Tausta</a>
+    <a href="#osaaminen">Osaaminen</a>
+    <a href="#yhteys">Yhteys</a>
+  </div>
+  <span class="availability">
+    <span class="availability-dot"></span>
+    Avoinna uusille mahdollisuuksille
+  </span>
+</nav>
+
+<div class="scroll-progress"><div class="scroll-progress__fill"></div></div>
+
+<span class="crosshair bl"></span>
+<span class="crosshair br"></span>
+
+<div class="toast-host" aria-live="polite" aria-atomic="true"></div>
+
+<div class="container">
+
+  <header class="hero" id="top">
+    <div class="hero-kicker">Suunnittelija · Kehittäjä · BIM</div>
+    <h1>Lauri Rekola</h1>
+    <p class="hero-subtitle">
+      Kylmälaitesuunnittelija, joka kirjoittaa työkalut joita itse käyttää —
+      Pythonia, TypeScriptiä ja AutoCAD LISPiä.
+    </p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#tyot">Katso projektit ↓</a>
+      <a class="btn btn-secondary" href="#yhteys">Ota yhteyttä</a>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       TAUSTA
+       ============================================================ -->
+  <section class="section" id="tausta">
+    <div class="section-kicker">Tietoa</div>
+    <h2>Tausta</h2>
+    <div class="about-grid">
+      <div class="about-block reveal">
+        <h3>Mistä tulen</h3>
+        <p>
+          Suunnittelen kylmälaitejärjestelmiä Radika Oy:lle ja rakennan
+          piirustustyötä nopeuttavia työkaluja samalla. AutoCAD on arkiväline ja
+          Solibri vastaanottava päässä — siinä välissä on paljon, mitä voi
+          automatisoida.
+        </p>
+      </div>
+      <div class="about-block reveal">
+        <h3>Mitä teen omalla ajalla</h3>
+        <p>
+          Python-pohjaisia BIM-konverttereita ja IFC-työkaluja, AutoCAD LISP
+          -komentoja kylmälaitesuunnittelun arkityöhön ja staattisia
+          web-sivustoja työkaluilleni. Kaikki avoimena lähdekoodina GitHubissa.
+        </p>
+      </div>
+      <div class="about-block reveal">
+        <h3>Mikä innostaa</h3>
+        <p>
+          Yhdistelmä suunnittelualan domain-tietoa ja ohjelmointia. Ohjelmoija
+          voi rakentaa konvertterin, mutta vain suunnittelija tietää, mitkä
+          PSetit Solibri-tarkastaja tarvitsee.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TYÖT
+       ============================================================ -->
+  <section class="section" id="tyot">
+    <div class="section-kicker">Projektit</div>
+    <h2>Avoimen lähdekoodin työt</h2>
+
+    <div class="projects-grid">
+
+      <!-- dxf2ifc -->
+      <article class="project-card reveal">
+        <div class="project-thumb">
+          <img src="assets/projects/dxf2ifc.png" alt="dxf2ifc — Python BIM-konvertterin käyttöliittymä" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+          <div class="project-thumb-placeholder" style="display:none;">dxf2ifc · screenshot</div>
+        </div>
+        <div class="project-body">
+          <div class="project-meta">
+            <span class="status-badge">OSS · MIT</span>
+            <span class="year-badge">2024–2026</span>
+          </div>
+          <h3>dxf2ifc</h3>
+          <p>
+            Python-pohjainen AutoCAD DXF/DWG → IFC4 -konvertteri kylmälaite- ja
+            LVI-suunnitteluun. Layer-mappaus RAVA3Pro-luokituksella, Solibri-
+            yhteensopiva output, oma GUI + CLI + Windows-installer.
+          </p>
+          <p class="role-line">
+            <span class="role-kicker">Rooli</span>
+            Tekijä — MIT-lisenssi, koodi avoin GitHubissa
+          </p>
+          <div class="tech-chips">
+            <span class="chip">Python</span>
+            <span class="chip">IfcOpenShell</span>
+            <span class="chip">PySide6</span>
+            <span class="chip">PyInstaller</span>
+            <span class="chip">ezdxf</span>
+          </div>
+          <div class="project-links">
+            <a href="https://mcrauli.github.io/autocad-lisp-ohjeet/dxf2ifc.html" target="_blank" rel="noopener">Esittely →</a>
+            <a href="https://github.com/Mcrauli/dxf2ifc" target="_blank" rel="noopener">GitHub →</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- AutoCAD LISP -työkalut -->
+      <article class="project-card reveal">
+        <div class="project-thumb">
+          <img src="assets/projects/autocad-lisp.png" alt="AutoCAD LISP -työkalujen Radika-ribbon" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+          <div class="project-thumb-placeholder" style="display:none;">AutoCAD-ribbon · screenshot</div>
+        </div>
+        <div class="project-body">
+          <div class="project-meta">
+            <span class="status-badge">OSS · LISP</span>
+            <span class="year-badge">2024–2026</span>
+          </div>
+          <h3>AutoCAD LISP -työkalut</h3>
+          <p>
+            Yhdeksän LISP-komentoa kylmälaitesuunnittelun arkityöhön:
+            putket, hyllyt, koteloreitit, höyrystimet, koneikot, lauhduttimet,
+            sähkövarustelu, kallistukset ja numerointi. Mukana oma CUIX-ribbon
+            ja AutoCAD/BricsCAD-asentaja.
+          </p>
+          <p class="role-line">
+            <span class="role-kicker">Rooli</span>
+            Tekijä — koodi avoin GitHubissa
+          </p>
+          <div class="tech-chips">
+            <span class="chip">AutoCAD LISP</span>
+            <span class="chip">Dynamic Blocks</span>
+            <span class="chip">CUIX</span>
+            <span class="chip">PowerShell</span>
+            <span class="chip">BricsCAD</span>
+          </div>
+          <div class="project-links">
+            <a href="https://mcrauli.github.io/autocad-lisp-ohjeet/" target="_blank" rel="noopener">Lataa →</a>
+            <a href="https://github.com/Mcrauli/autocad-lisp-ohjeet" target="_blank" rel="noopener">GitHub →</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Suunnittelutyökalut-sivusto -->
+      <article class="project-card reveal">
+        <div class="project-thumb">
+          <img src="assets/projects/suunnittelutyokalut.png" alt="Suunnittelutyökalut-sivuston etusivu" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+          <div class="project-thumb-placeholder" style="display:none;">Suunnittelutyokalut.fi · screenshot</div>
+        </div>
+        <div class="project-body">
+          <div class="project-meta">
+            <span class="status-badge">OSS · WEB</span>
+            <span class="year-badge">2025–2026</span>
+          </div>
+          <h3>Suunnittelutyökalut-sivusto</h3>
+          <p>
+            Staattinen 4-sivuinen ohje- ja jakelupaketti LISP-työkaluille:
+            animoidut SVG-demot, FAQ-osio, JSON-LD-skemat, responsive layout.
+            Vanilla HTML/CSS/JS — ei frameworkia, ei build-vaiheita.
+          </p>
+          <p class="role-line">
+            <span class="role-kicker">Rooli</span>
+            Suunnittelija ja toteuttaja — GitHub Pages -hosting
+          </p>
+          <div class="tech-chips">
+            <span class="chip">HTML5</span>
+            <span class="chip">CSS3</span>
+            <span class="chip">Vanilla JS</span>
+            <span class="chip">JSON-LD</span>
+            <span class="chip">GitHub Pages</span>
+          </div>
+          <div class="project-links">
+            <a href="https://mcrauli.github.io/autocad-lisp-ohjeet/" target="_blank" rel="noopener">Avaa sivu →</a>
+            <a href="https://github.com/Mcrauli/autocad-lisp-ohjeet" target="_blank" rel="noopener">GitHub →</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       OSAAMINEN
+       ============================================================ -->
+  <section class="section" id="osaaminen">
+    <div class="section-kicker">Skills</div>
+    <h2>Osaaminen</h2>
+    <div class="skill-groups">
+      <div class="skill-group reveal">
+        <h3>Kielet</h3>
+        <ul class="chips">
+          <li>Python</li>
+          <li>TypeScript</li>
+          <li>AutoCAD LISP</li>
+          <li>HTML / CSS</li>
+          <li>PowerShell</li>
+        </ul>
+      </div>
+      <div class="skill-group reveal">
+        <h3>BIM &amp; CAD</h3>
+        <ul class="chips">
+          <li>IFC4</li>
+          <li>IfcOpenShell</li>
+          <li>AutoCAD</li>
+          <li>BricsCAD</li>
+          <li>Solibri</li>
+          <li>RAVA3Pro</li>
+          <li>Talo2000</li>
+          <li>MagiCAD</li>
+        </ul>
+      </div>
+      <div class="skill-group reveal">
+        <h3>Web</h3>
+        <ul class="chips">
+          <li>Vanilla JS</li>
+          <li>Next.js</li>
+          <li>React</li>
+          <li>Three.js</li>
+          <li>GitHub Pages</li>
+        </ul>
+      </div>
+      <div class="skill-group reveal">
+        <h3>Suunnitteluala</h3>
+        <ul class="chips">
+          <li>Kylmälaitesuunnittelu</li>
+          <li>LVI-piirustukset</li>
+          <li>DXF / DWG</li>
+          <li>CUIX / Ribbon</li>
+          <li>BIM-koordinointi</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       YHTEYS
+       ============================================================ -->
+  <section class="section" id="yhteys">
+    <div class="section-kicker">Kontakti</div>
+    <h2>Ota yhteyttä</h2>
+    <div class="contact-card reveal">
+      <ul class="contact-list">
+        <li>
+          <span class="contact-label">Sähköposti</span>
+          <span class="contact-value">
+            <a href="mailto:laurirekola@icloud.com">laurirekola@icloud.com</a>
+            <button class="copy-btn" type="button" data-copy="laurirekola@icloud.com" aria-label="Kopioi sähköposti">Kopioi</button>
+          </span>
+        </li>
+        <li>
+          <span class="contact-label">GitHub</span>
+          <span class="contact-value">
+            <a href="https://github.com/Mcrauli" target="_blank" rel="noopener">github.com/Mcrauli</a>
+          </span>
+        </li>
+        <li>
+          <span class="contact-label">Sijainti</span>
+          <span class="contact-value">Suomi · etätyö OK</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+</div>
+
+<footer class="site-footer">
+  © 2026 Lauri Rekola
+</footer>
+
+<script src="script.js?v=1"></script>
+</body>
+</html>
