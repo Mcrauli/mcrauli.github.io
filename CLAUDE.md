@@ -55,10 +55,16 @@ Rento ja persoonallinen, slangia. "Moi! Oon Lauri", "kuluttavaa", "kavereille",
 1. **Hero** (`#top`) — kicker "Tekninen suunnittelu × CAD/BIM-automaatio" + h1 LAURI REKOLA (glitch, keskitetty) + tagline polku + subtitle + CTA
 2. **Vahvuudet** (`#vahvuudet`) — "Mitä tuon mukanani", 3 value-cardia (01/02/03) työnantaja-näkökulmasta
 3. **Työt** (`#tyot`) — section-lead + 3 projektikorttia case-muodossa
-4. **Tausta** (`#tausta`) — 3 about-blokkia: Mistä tulen / Mitä tykkään tehä / Mihin tähtään
-5. **Stäkki** (`#stakki`) — 2 skill-tieria: Pääosaaminen (magenta-chipit) + Tukiosaaminen (himmeämmät)
-6. **Yhteys** (`#yhteys`) — intro + email (copy) + status + sijainti + CTA-nappi
-7. **Footer** — minimal
+4. **Caset** (`#caset`) — 3 case-study-osiota. Jokaisessa: työnkulku-
+   diagrammi (`.flow`, CSS-pohjainen 5-vaiheinen prosessikaavio) +
+   `.case-grid` (Lähtötilanne / Ratkaisu / Hyöty / Rajaus) + `.case-foot`
+   (teknologiat + mailto-CTA). Ankkurit: `#dxf2ifc-case`,
+   `#autocad-lisp-case`, `#suunnittelutyokalut-case`. EI omaa nav-linkkiä
+   (vältetään topnavin ahtautta) — saavutetaan projektikorttien CTA:sta.
+5. **Tausta** (`#tausta`) — 3 about-blokkia: Mistä tulen / Mitä tykkään tehdä / Mihin tähtään
+6. **Stäkki** (`#stakki`) — 2 skill-tieria: Pääosaaminen (magenta-chipit) + Tukiosaaminen (himmeämmät)
+7. **Yhteys** (`#yhteys`) — intro + email (copy) + status + sijainti + CTA-nappi
+8. **Footer** — minimal
 
 ## Projektikortit
 
@@ -73,8 +79,11 @@ Per-projekti kortti sisältää:
   Hyöty-rivi käyttää `.case-tag--hyoty` cyan-varianttia (kortin myyntipointti)
 - ROOLI-rivi
 - Tech-chipit
-- CTA: projektikohtainen mailto-linkki, esim. "Katso työnkulku →",
-  "Katso yleiskuvaus →", "Tutustu projektiin →" (EI github, EI lataa)
+- CTA: ankkurilinkki saman sivun case-osioon (`#dxf2ifc-case` jne.),
+  esim. "Katso työnkulku →", "Katso yleiskuvaus →", "Tutustu projektiin →".
+  EI mailto kortissa — sähköposti-CTA on vasta case-osion lopussa
+  ("Kysy työnkulusta →" jne.). Sääntö: "Katso…" vie aina sisältöön,
+  "Kysy…" vie sähköpostiin. (EI github, EI lataa)
 
 Projektit (esitellään yleisellä tasolla, ei firmaa/koodia):
 1. **DXF/DWG → IFC -konvertteri** — Python, IFC4

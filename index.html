@@ -26,7 +26,7 @@
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=6">
+<link rel="stylesheet" href="style.css?v=7">
 
 <script type="application/ld+json">
 {
@@ -219,7 +219,7 @@
             <span class="chip">GUI-kehitys</span>
           </div>
           <div class="project-links">
-            <a href="mailto:laurirekola@icloud.com?subject=DXF-IFC-konvertteri">Katso työnkulku →</a>
+            <a href="#dxf2ifc-case">Katso työnkulku →</a>
           </div>
         </div>
       </article>
@@ -278,7 +278,7 @@
             <span class="chip">BricsCAD</span>
           </div>
           <div class="project-links">
-            <a href="mailto:laurirekola@icloud.com?subject=AutoCAD-piirtotyokalut">Katso yleiskuvaus →</a>
+            <a href="#autocad-lisp-case">Katso yleiskuvaus →</a>
           </div>
         </div>
       </article>
@@ -334,12 +334,145 @@
             <span class="chip">SVG-animaatiot</span>
           </div>
           <div class="project-links">
-            <a href="mailto:laurirekola@icloud.com?subject=Tyokalusivusto">Tutustu projektiin →</a>
+            <a href="#suunnittelutyokalut-case">Tutustu projektiin →</a>
           </div>
         </div>
       </article>
 
     </div>
+  </section>
+
+  <!-- ============================================================
+       CASET — työnkulut tarkemmin
+       ============================================================ -->
+  <section class="section" id="caset">
+    <div class="section-kicker">case studies</div>
+    <h2>Näin ne <span class="accent">toimivat</span></h2>
+    <p class="section-lead">
+      Kolme työnkulkua hieman tarkemmin: lähtötilanne, mitä rakensin ja
+      mitä siitä seurasi. Kaikki yleisellä tasolla — lähdekoodi, sisäiset
+      asetukset ja firmakohtaiset käytännöt jäävät pois.
+    </p>
+
+    <!-- Case 01 — dxf2ifc -->
+    <article class="case-study reveal" id="dxf2ifc-case">
+      <div class="case-head">
+        <span class="case-index">case 01</span>
+        <h3>DXF/DWG → IFC4 -työnkulku</h3>
+      </div>
+
+      <ol class="flow" aria-label="DXF/DWG–IFC4-työnkulun vaiheet">
+        <li class="flow-step"><span class="flow-num">1</span>CAD-aineisto</li>
+        <li class="flow-step"><span class="flow-num">2</span>Layer-mappaus</li>
+        <li class="flow-step"><span class="flow-num">3</span>Property setit</li>
+        <li class="flow-step"><span class="flow-num">4</span>IFC4-malli</li>
+        <li class="flow-step flow-step--end"><span class="flow-num">5</span>Solibri-tarkastus</li>
+      </ol>
+
+      <div class="case-grid">
+        <div class="case-block">
+          <h4>Lähtötilanne</h4>
+          <p>CAD-aineiston vienti tietomallitarkasteluun on helposti manuaalista työtä. Tasot ja ominaisuudet käydään läpi ja mäpätään käsin joka kierroksella — hidasta ja altista pienille virheille.</p>
+        </div>
+        <div class="case-block">
+          <h4>Ratkaisu</h4>
+          <p>Rakensin Python-pohjaisen työnkulun, joka vie DXF/DWG-aineistoa kohti IFC4-koordinaatiomallia. Mappaus nojaa CAD-tasoihin, ja elementeille tuotetaan property set -tyyppistä tietoa. IFC:n kirjoitus hoituu IfcOpenShellillä, ja lopputulos avautuu tarkastettavaksi esimerkiksi Solibrissa.</p>
+        </div>
+        <div class="case-block">
+          <h4>Hyöty</h4>
+          <p>Sama aineisto kääntyy samalla logiikalla joka kerta, joten prosessi on toistettavampi. Käsityön määrä vähenee ja malli on helpompi viedä tietomallikoordinoinnin tarkasteluun.</p>
+        </div>
+        <div class="case-block case-block--note">
+          <h4>Rajaus</h4>
+          <p>Lähdekoodi, mappaussäännöt ja projektikohtaiset asetukset eivät ole julkisia. Työkalu on tehty työympäristössä, joten kuvaan sen tässä yleisellä tasolla.</p>
+        </div>
+      </div>
+
+      <div class="case-foot">
+        <span class="case-tech">Python · IfcOpenShell · IFC4 · DXF/DWG</span>
+        <a class="case-ask" href="mailto:laurirekola@icloud.com?subject=DXF-IFC-tyonkulku">Kysy työnkulusta →</a>
+      </div>
+    </article>
+
+    <!-- Case 02 — AutoCAD LISP -->
+    <article class="case-study reveal" id="autocad-lisp-case">
+      <div class="case-head">
+        <span class="case-index">case 02</span>
+        <h3>AutoCAD LISP -piirtotyökalut</h3>
+      </div>
+
+      <ol class="flow" aria-label="AutoCAD-piirtotyökalujen työnkulun vaiheet">
+        <li class="flow-step"><span class="flow-num">1</span>Toistuva piirtotyö</li>
+        <li class="flow-step"><span class="flow-num">2</span>LISP-komento</li>
+        <li class="flow-step"><span class="flow-num">3</span>Ribbon-työkalupaketti</li>
+        <li class="flow-step"><span class="flow-num">4</span>Vakioitu jälki</li>
+        <li class="flow-step flow-step--end"><span class="flow-num">5</span>Helppo käyttöönotto</li>
+      </ol>
+
+      <div class="case-grid">
+        <div class="case-block">
+          <h4>Lähtötilanne</h4>
+          <p>Sama piirtotyö toistuu suunnittelussa kymmeniä kertoja päivässä. Komponentit, tasot ja merkinnät asetellaan käsin, ja lopputulos vaihtelee hieman tekijän mukaan.</p>
+        </div>
+        <div class="case-block">
+          <h4>Ratkaisu</h4>
+          <p>Tein sarjan LISP-komentoja, jotka hoitavat toistuvat piirto- ja muokkausvaiheet valmiiksi. Komennot on koottu omaan ribbon-välilehteen, joten niitä ei tarvitse muistaa ulkoa. Asennus on tehty yhden ajon helpoksi, niin että paketin saa käyttöön myös kollegan koneella — sekä AutoCADissa että BricsCADissa.</p>
+        </div>
+        <div class="case-block">
+          <h4>Hyöty</h4>
+          <p>Toistuva käsityö muuttuu muutamaksi napautukseksi. Suunnittelijan arki nopeutuu ja piirrosjälki pysyy yhtenäisenä siitä riippumatta, kuka työkalua käyttää.</p>
+        </div>
+        <div class="case-block case-block--note">
+          <h4>Rajaus</h4>
+          <p>Komentojen tarkkaa sisältöä ja firmakohtaisia piirtokäytäntöjä en julkaise. Esittelen tässä työkalujen idean ja käytettävyyden, en sisäisiä yksityiskohtia.</p>
+        </div>
+      </div>
+
+      <div class="case-foot">
+        <span class="case-tech">AutoCAD LISP · BricsCAD · Dynamic Blocks</span>
+        <a class="case-ask" href="mailto:laurirekola@icloud.com?subject=AutoCAD-tyokalut-toteutus">Kysy toteutuksesta →</a>
+      </div>
+    </article>
+
+    <!-- Case 03 — Työkalusivusto -->
+    <article class="case-study reveal" id="suunnittelutyokalut-case">
+      <div class="case-head">
+        <span class="case-index">case 03</span>
+        <h3>Suunnittelutyökalujen tukisivusto</h3>
+      </div>
+
+      <ol class="flow" aria-label="Tukisivuston työnkulun vaiheet">
+        <li class="flow-step"><span class="flow-num">1</span>Työkalu</li>
+        <li class="flow-step"><span class="flow-num">2</span>Ohje</li>
+        <li class="flow-step"><span class="flow-num">3</span>Käyttöönotto</li>
+        <li class="flow-step"><span class="flow-num">4</span>Esimerkki</li>
+        <li class="flow-step flow-step--end"><span class="flow-num">5</span>Tuki</li>
+      </ol>
+
+      <div class="case-grid">
+        <div class="case-block">
+          <h4>Lähtötilanne</h4>
+          <p>Hyvätkin työkalut jäävät käyttämättä, jos ohjeet ovat hajallaan tai niitä ei löydy. Käyttöönoton kynnys nousee turhaan.</p>
+        </div>
+        <div class="case-block">
+          <h4>Ratkaisu</h4>
+          <p>Kokosin kevyen web-pohjaisen tuki- ja dokumentaatiosivuston, joka esittelee työkalut, ohjeistaa käytön ja kertoo käyttöönoton vaiheet samassa paikassa. Selkeä käyttöliittymä, animoidut esimerkit ja toimii puhelimella. Tehty ilman frameworkia, joten ylläpito on nopeaa.</p>
+        </div>
+        <div class="case-block">
+          <h4>Hyöty</h4>
+          <p>Ohjeet ja työkalut löytyvät yhdestä paikasta selkeässä muodossa. Käyttöönoton kynnys madaltuu, ja sivusto tukee suunnittelutyötä arjessa.</p>
+        </div>
+        <div class="case-block case-block--note">
+          <h4>Rajaus</h4>
+          <p>Sivuston sisältö esitetään tässä yleisellä tasolla. Työkalukohtaiset ohjeet ja sisäiset tiedot eivät kuulu julkiseen esittelyyn.</p>
+        </div>
+      </div>
+
+      <div class="case-foot">
+        <span class="case-tech">HTML · CSS · JavaScript · UI/UX</span>
+        <a class="case-ask" href="mailto:laurirekola@icloud.com?subject=Tyokalusivusto-projekti">Kysy lisää projektista →</a>
+      </div>
+    </article>
   </section>
 
   <!-- ============================================================
