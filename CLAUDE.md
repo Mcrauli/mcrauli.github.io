@@ -46,7 +46,7 @@ Rento ja persoonallinen, slangia. "Moi! Oon Lauri", "kuluttavaa", "kavereille",
 1. **Hero** — kicker [ Tuleva tietomallikoordinaattori ] + h1 LAURI REKOLA (glitch) + tagline polku + subtitle + CTA
 2. **Tausta** (`#tausta`) — 3 about-blokkia: Mistä tulen / Mitä tykkään tehä / Mihin tähtään
 3. **Työt** (`#tyot`) — 3 projektikorttia
-4. **Stäkki** (`#stakki`) — 4 chip-ryhmää: Kielet / BIM&CAD / Web / Suunnitteluala
+4. **Stäkki** (`#stakki`) — 5 chip-ryhmää: Kielet / BIM&CAD / 3D&valmistus / Web / Suunnitteluala
 5. **Yhteys** (`#yhteys`) — email (copy-to-clipboard) + status + sijainti
 6. **Footer** — minimal
 
