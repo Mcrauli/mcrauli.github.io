@@ -10,10 +10,19 @@ Henkilökohtainen portfolio-sivu työnhakua varten. Plain HTML/CSS/JS, GitHub Pa
 ## Lauri (fakta-taso joka näkyy sivulla)
 
 - Teknisen suunnittelun opiskelija
-- Työharjoittelussa Radika Oy:llä — ei vakituinen työ
-- Tavoittelee tietomallikoordinaattorin paikkaa
-- Koodaa omalla ajalla Pythonia ja AutoCAD LISPiä
-- **Status:** opiskelee · etsii harjoittelu/työpaikkaa
+- Ollut työharjoittelussa — **firman nimeä EI mainita sivulla** (IP-rajaus)
+- Tavoittelee teknisen suunnittelun / tietomallikoordinoinnin harjoittelu- tai junior-paikkaa
+- Tekee CAD/BIM-automaatiota: Python, AutoCAD LISP, web
+- Harrastaa: auton/moottorin rakentaminen, 3D-tulostus (Stratasys), tekniikka
+- **Status:** opiskelee · etsii harjoittelu- tai junior-paikkaa
+
+## KRIITTINEN IP-rajaus
+
+Projektit on tehty työympäristössä / liittyvät firman sisäisiin prosesseihin.
+Sivulla EI saa olla: lähdekoodia, GitHub-repo-linkkejä, asiakasdataa,
+firman nimiä, tarkkoja sisäisiä yksityiskohtia. Projektit esitellään
+yleisellä tasolla (idea → toteutus → lopputulos). Näyttöinä screenshotit
+tai SVG-mockupit, ei koodia. "Radika Oy" ei saa esiintyä missään.
 
 ## Visuaalinen identiteetti — cyberpunk-neon
 
@@ -43,35 +52,35 @@ Rento ja persoonallinen, slangia. "Moi! Oon Lauri", "kuluttavaa", "kavereille",
 
 ## Rakenne (1-page)
 
-1. **Hero** — kicker [ Tuleva tietomallikoordinaattori ] + h1 LAURI REKOLA (glitch) + tagline polku + subtitle + CTA
-2. **Tausta** (`#tausta`) — 3 about-blokkia: Mistä tulen / Mitä tykkään tehä / Mihin tähtään
-3. **Työt** (`#tyot`) — 3 projektikorttia
-4. **Stäkki** (`#stakki`) — 5 chip-ryhmää: Kielet / BIM&CAD / 3D&valmistus / Web / Suunnitteluala
-5. **Yhteys** (`#yhteys`) — email (copy-to-clipboard) + status + sijainti
-6. **Footer** — minimal
+1. **Hero** (`#top`) — kicker "Tekninen suunnittelu × CAD/BIM-automaatio" + h1 LAURI REKOLA (glitch, keskitetty) + tagline polku + subtitle + CTA
+2. **Vahvuudet** (`#vahvuudet`) — "Mitä tuon mukanani", 3 value-cardia (01/02/03) työnantaja-näkökulmasta
+3. **Työt** (`#tyot`) — section-lead + 3 projektikorttia case-muodossa
+4. **Tausta** (`#tausta`) — 3 about-blokkia: Mistä tulen / Mitä tykkään tehä / Mihin tähtään
+5. **Stäkki** (`#stakki`) — 2 skill-tieria: Pääosaaminen (magenta-chipit) + Tukiosaaminen (himmeämmät)
+6. **Yhteys** (`#yhteys`) — intro + email (copy) + status + sijainti + CTA-nappi
+7. **Footer** — minimal
 
-## Projektit ja IP-rajat
-
-**Tärkeää:** portfolio EI sisällä GitHub-linkkejä eikä lataa-painikkeita.
-Käyttäjä haluaa esitellä työnsä mutta ei jakaa lähdekoodia tai latauksia.
+## Projektikortit
 
 Per-projekti kortti sisältää:
-- Screenshot (lazyload + fallback placeholder)
-- Status-badge kategoria (`PYTHON · BIM`, `AUTOCAD · LISP`, `WEB · DESIGN`)
+- Kuva: `<img>` joka `onerror`-fallback näyttää inline-SVG-mockupin
+  (`.project-mock`) — ei "screenshot tulossa" -tekstiä
+- Status-badge kategoria (`PYTHON · BIM`, `CAD-AUTOMAATIO`, `WEB`)
 - Year-badge ("2024 →")
-- Kuvaus (3-4 lauseen pituinen)
-- ROOLI-rivi (mitä rooli oli, ei mainita avointa koodia)
-- Tech-chipit (Mono cyan-outline)
-- CTA: `kysy lisää →` mailto-linkki (ei github tai lataa)
+- Case-rivit: `.case-line` joissa `.case-tag` (Ongelma / Ratkaisu)
+- ROOLI-rivi
+- Tech-chipit
+- CTA: `Kysy lisää tästä →` mailto (EI github, EI lataa)
 
-Projektit:
-1. **dxf2ifc** — Python DXF/DWG → IFC4 -konvertteri
-2. **AutoCAD-piirtotyökalut** — 9 LISP-komentoa + ribbon
-3. **Suunnittelutyökalut-sivusto** — staattinen ohje- ja jakelupaketin sivu
+Projektit (esitellään yleisellä tasolla, ei firmaa/koodia):
+1. **DXF/DWG → IFC -konvertteri** — Python, IFC4
+2. **AutoCAD-piirtotyökalut** — CAD-automaatio, LISP
+3. **Työkalujen esittelysivusto** — web
 
 ## Sisältö-iteraatio
 
-Päivitettävät kuvat (`assets/projects/`):
+Projektikuvat (`assets/projects/`) — kun käyttäjä saa oikeat screenshotit,
+ne korvaavat SVG-mockupit automaattisesti (img onerror -fallback):
 - `dxf2ifc.png`
 - `autocad-lisp.png`
 - `suunnittelutyokalut.png`

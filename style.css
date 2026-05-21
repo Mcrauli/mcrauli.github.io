@@ -456,6 +456,64 @@ a { color: var(--magenta); text-decoration: none; }
 
 .section h2 .accent { color: var(--magenta); }
 
+.section-lead {
+  max-width: 680px;
+  margin: -14px 0 38px;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--text-dim);
+}
+
+/* ---------- Value cards (mitä tuon mukanani) ---------- */
+
+.value-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.value-card {
+  padding: 26px 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-dim);
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.value-card:hover {
+  border-color: var(--magenta-dim);
+  transform: translateY(-2px);
+}
+
+.value-num {
+  display: block;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--magenta);
+  opacity: 0.4;
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+}
+
+.value-card h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0 0 10px 0;
+  line-height: 1.3;
+}
+
+.value-card p {
+  margin: 0;
+  line-height: 1.65;
+  color: var(--text-dim);
+  font-size: 14px;
+}
+
 /* ---------- About ---------- */
 
 .about-grid {
@@ -561,21 +619,16 @@ a { color: var(--magenta); text-decoration: none; }
   object-fit: cover;
 }
 
-.project-thumb-placeholder {
+.project-mock {
   position: absolute;
   inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'JetBrains Mono', ui-monospace, monospace;
-  font-size: 11px;
-  color: var(--text-faint);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
 }
 
-.project-thumb-placeholder::before { content: "[ "; }
-.project-thumb-placeholder::after  { content: " ]"; }
+.project-mock svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
 
 .project-body {
   padding: 20px 22px 22px;
@@ -629,6 +682,25 @@ a { color: var(--magenta); text-decoration: none; }
   line-height: 1.6;
   color: var(--text-dim);
   font-size: 14px;
+}
+
+.case-line {
+  font-size: 13.5px;
+  line-height: 1.6;
+}
+
+.case-tag {
+  display: inline-block;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--magenta);
+  margin-right: 8px;
+  padding: 2px 7px;
+  border: 1px solid var(--magenta-dim);
+  border-radius: 3px;
 }
 
 .role-line {
@@ -697,28 +769,38 @@ a { color: var(--magenta); text-decoration: none; }
 
 /* ---------- Skills ---------- */
 
-.skill-groups {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 28px;
+.skill-tier {
+  margin-bottom: 30px;
 }
 
-.skill-group h3 {
-  font-family: 'JetBrains Mono', ui-monospace, monospace;
-  font-size: 12px;
+.skill-tier:last-child { margin-bottom: 0; }
+
+.skill-tier-head {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.skill-tier-head h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 18px;
   font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
-  color: var(--cyan);
-  margin: 0 0 16px 0;
+  color: var(--text);
+  margin: 0;
 }
 
-.skill-group h3::before {
-  content: "// ";
+.skill-tier-note {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 11px;
+  letter-spacing: 0.04em;
   color: var(--text-faint);
 }
 
-.skill-group .chips {
+.skill-tier-note::before { content: "// "; }
+
+.chips {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
@@ -727,21 +809,41 @@ a { color: var(--magenta); text-decoration: none; }
   list-style: none;
 }
 
-.skill-group .chips li {
+.chips li {
   display: inline-block;
-  padding: 6px 12px;
-  border: 1px solid var(--border-dim);
-  border-radius: 2px;
   font-family: 'JetBrains Mono', ui-monospace, monospace;
-  font-size: 12px;
-  color: var(--text);
-  background: rgba(255, 42, 109, 0.03);
-  transition: border-color 0.18s ease, color 0.18s ease;
+  transition: border-color 0.18s ease, color 0.18s ease, background 0.18s ease;
 }
 
-.skill-group .chips li:hover {
-  border-color: var(--magenta-dim);
+/* Paaosaaminen — korostettu */
+.chips-primary li {
+  padding: 8px 14px;
+  border: 1px solid var(--magenta-dim);
+  border-radius: 3px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text);
+  background: var(--magenta-bg);
+}
+
+.chips-primary li:hover {
+  border-color: var(--magenta);
   color: var(--magenta);
+}
+
+/* Tukiosaaminen — himmeampi */
+.chips-support li {
+  padding: 6px 12px;
+  border: 1px solid var(--border-dim);
+  border-radius: 3px;
+  font-size: 12px;
+  color: var(--text-dim);
+  background: transparent;
+}
+
+.chips-support li:hover {
+  border-color: var(--cyan-dim);
+  color: var(--cyan);
 }
 
 /* ---------- Contact ---------- */
@@ -767,12 +869,25 @@ a { color: var(--magenta); text-decoration: none; }
   pointer-events: none;
 }
 
+.contact-intro {
+  margin: 0 0 24px 0;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--text);
+  position: relative;
+}
+
 .contact-list {
   margin: 0;
   padding: 0;
   list-style: none;
   display: grid;
   gap: 16px;
+  position: relative;
+}
+
+.contact-cta {
+  margin-top: 26px;
   position: relative;
 }
 
