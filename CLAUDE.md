@@ -63,14 +63,18 @@ Rento ja persoonallinen, slangia. "Moi! Oon Lauri", "kuluttavaa", "kavereille",
 ## Projektikortit
 
 Per-projekti kortti sisältää:
-- Kuva: `<img>` joka `onerror`-fallback näyttää inline-SVG-mockupin
-  (`.project-mock`) — ei "screenshot tulossa" -tekstiä
+- Kuva: inline-SVG-kuvitus (`.project-mock`) + pieni `.project-caption`
+  -kuvateksti. EI oikeita screenshotteja (IP-rajaus) — SVG on lopullinen
+  ratkaisu, ei placeholder. Kuvatekstit: "Työnkulun havainnollistus",
+  "SVG-kuvitus työkalun ideasta", "Anonymisoitu yleiskuva".
 - Status-badge kategoria (`PYTHON · BIM`, `CAD-AUTOMAATIO`, `WEB`)
 - Year-badge ("2024 →")
-- Case-rivit: `.case-line` joissa `.case-tag` (Ongelma / Ratkaisu)
+- Case-rivit: `.case-line` joissa `.case-tag` (Ongelma / Ratkaisu / Hyöty);
+  Hyöty-rivi käyttää `.case-tag--hyoty` cyan-varianttia (kortin myyntipointti)
 - ROOLI-rivi
 - Tech-chipit
-- CTA: `Kysy lisää tästä →` mailto (EI github, EI lataa)
+- CTA: projektikohtainen mailto-linkki, esim. "Katso työnkulku →",
+  "Katso yleiskuvaus →", "Tutustu projektiin →" (EI github, EI lataa)
 
 Projektit (esitellään yleisellä tasolla, ei firmaa/koodia):
 1. **DXF/DWG → IFC -konvertteri** — Python, IFC4
@@ -79,11 +83,10 @@ Projektit (esitellään yleisellä tasolla, ei firmaa/koodia):
 
 ## Sisältö-iteraatio
 
-Projektikuvat (`assets/projects/`) — kun käyttäjä saa oikeat screenshotit,
-ne korvaavat SVG-mockupit automaattisesti (img onerror -fallback):
-- `dxf2ifc.png`
-- `autocad-lisp.png`
-- `suunnittelutyokalut.png`
+Projektikuvat ovat inline-SVG-kuvituksia, EI screenshotteja. Päätös:
+työkalut liittyvät firman sisäisiin prosesseihin, joten oikeita
+screenshotteja ei julkaista. SVG-kuvitukset ovat lopullinen ratkaisu —
+älä ehdota screenshot-tiedostojen lisäämistä.
 
 OG-image (`assets/og-image.png`, 1200×630) sosiaalisten medioiden esikatselua varten.
 

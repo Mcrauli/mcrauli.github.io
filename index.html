@@ -17,7 +17,7 @@
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=5">
+<link rel="stylesheet" href="style.css?v=6">
 
 <script type="application/ld+json">
 {
@@ -156,9 +156,8 @@
       <!-- dxf2ifc -->
       <article class="project-card reveal">
         <div class="project-thumb">
-          <img src="assets/projects/dxf2ifc.png" alt="DXF/DWG to IFC -konvertterin käyttöliittymä" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
-          <div class="project-mock" style="display:none;">
-            <svg viewBox="0 0 480 270" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="DXF/DWG muunnetaan IFC-koordinaatiomalliksi">
+          <div class="project-mock">
+            <svg viewBox="0 0 480 270" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Kuvitus: DXF/DWG-aineisto muunnetaan IFC4-koordinaatiomalliksi">
               <g font-family="JetBrains Mono, monospace" font-size="13" font-weight="600">
                 <text x="74" y="38" fill="#8b8aa8" text-anchor="middle" letter-spacing="1">DXF / DWG</text>
               </g>
@@ -188,6 +187,7 @@
               </g>
             </svg>
           </div>
+          <span class="project-caption">Työnkulun havainnollistus</span>
         </div>
         <div class="project-body">
           <div class="project-meta">
@@ -195,20 +195,22 @@
             <span class="year-badge">2024 →</span>
           </div>
           <h3>DXF/DWG → IFC -konvertteri</h3>
-          <p class="case-line"><span class="case-tag">Ongelma</span> Suunnittelutiedon vienti tietomalliksi on hidasta käsityötä — tasot ja ominaisuudet mäpätään erikseen joka kerta.</p>
-          <p class="case-line"><span class="case-tag">Ratkaisu</span> Työkalu joka lukee DXF/DWG-piirustuksen ja muodostaa siitä kevyen IFC4-koordinaatiomallin. Layer-pohjainen mappaus, suomalaiseen suunnittelukäyttöön sopivat property setit, lopputulos tarkasteltavissa esimerkiksi Solibrissa.</p>
+          <p class="case-line"><span class="case-tag">Ongelma</span> CAD-aineiston vienti tietomalliksi on hidasta käsityötä — tasot ja ominaisuudet mäpätään erikseen joka kerta.</p>
+          <p class="case-line"><span class="case-tag">Ratkaisu</span> Python-työkalu joka lukee DXF/DWG-piirustuksen ja muodostaa siitä IFC4-koordinaatiomallin. Mäppäys rakentuu CAD-tasojen pohjalle ja elementeille viedään property set -tyyppistä tietoa. Lopputulos avautuu tarkastettavaksi esimerkiksi Solibrissa.</p>
+          <p class="case-line"><span class="case-tag case-tag--hyoty">Hyöty</span> Vähentää manuaalista CAD → BIM -työtä ja tekee aineiston siirrosta toistettavaa — tukena tietomallikoordinoinnissa.</p>
           <p class="role-line">
             <span class="role-kicker">Rooli</span>
-            Idea, toteutus ja käyttöliittymä — Python-pohjainen työkalu omalla GUI:lla
+            Idea, toteutus ja käyttöliittymä — Python ja IfcOpenShell, oma GUI
           </p>
           <div class="tech-chips">
             <span class="chip">Python</span>
+            <span class="chip">IfcOpenShell</span>
             <span class="chip">IFC4</span>
             <span class="chip">DXF / DWG</span>
             <span class="chip">GUI-kehitys</span>
           </div>
           <div class="project-links">
-            <a href="mailto:laurirekola@icloud.com?subject=DXF-IFC-konvertteri">Kysy lisää tästä →</a>
+            <a href="mailto:laurirekola@icloud.com?subject=DXF-IFC-konvertteri">Katso työnkulku →</a>
           </div>
         </div>
       </article>
@@ -216,9 +218,8 @@
       <!-- AutoCAD LISP -työkalut -->
       <article class="project-card reveal">
         <div class="project-thumb">
-          <img src="assets/projects/autocad-lisp.png" alt="AutoCAD LISP -piirtotyökalujen ribbon-välilehti" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
-          <div class="project-mock" style="display:none;">
-            <svg viewBox="0 0 480 270" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AutoCAD-ribbon ja automatisoitu piirtotyökalu">
+          <div class="project-mock">
+            <svg viewBox="0 0 480 270" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Kuvitus: automatisoitu piirtokomento ja oma ribbon-välilehti">
               <rect x="24" y="22" width="432" height="52" rx="3" fill="rgba(255,42,109,0.05)" stroke="#5e5d78" stroke-width="1"/>
               <g fill="rgba(5,217,232,0.1)" stroke="#05d9e8" stroke-width="1.3">
                 <rect x="36" y="32" width="32" height="32" rx="3"/>
@@ -246,6 +247,7 @@
               </g>
             </svg>
           </div>
+          <span class="project-caption">SVG-kuvitus työkalun ideasta</span>
         </div>
         <div class="project-body">
           <div class="project-meta">
@@ -253,11 +255,12 @@
             <span class="year-badge">2024 →</span>
           </div>
           <h3>AutoCAD-piirtotyökalut</h3>
-          <p class="case-line"><span class="case-tag">Ongelma</span> Sama piirtotyö toistuu sadasti — komponentit, layerit ja merkinnät asetetaan käsin joka kerta.</p>
-          <p class="case-line"><span class="case-tag">Ratkaisu</span> Sarja LISP-komentoja jotka hoitavat toistuvat piirtovaiheet yhdellä napautuksella. Oma ribbon-välilehti CAD-ohjelmaan, niin että työkalut ovat käytettävissä ilman komentojen muistelua — ja jälki pysyy yhtenäisenä tekijästä riippumatta.</p>
+          <p class="case-line"><span class="case-tag">Ongelma</span> Sama piirtotyö toistuu sadasti — komponentit, tasot ja merkinnät asetetaan käsin joka kerta.</p>
+          <p class="case-line"><span class="case-tag">Ratkaisu</span> Työkalupaketti, jossa toistuvat piirto- ja muokkausvaiheet hoituvat valmiilla komennoilla. Komennot löytyvät omasta ribbon-välilehdestä, ja asennus on tehty helpoksi — paketin saa käyttöön myös kollegan koneella.</p>
+          <p class="case-line"><span class="case-tag case-tag--hyoty">Hyöty</span> Nopeuttaa suunnittelijan arkea ja pitää piirrosjäljen yhtenäisenä tekijästä riippumatta.</p>
           <p class="role-line">
             <span class="role-kicker">Rooli</span>
-            Suunnittelin komennot suunnittelijan näkökulmasta ja toteutin ne LISPillä
+            Suunnittelin komennot suunnittelijan näkökulmasta, toteutin ne LISPillä ja paketoin asennettaviksi
           </p>
           <div class="tech-chips">
             <span class="chip">AutoCAD LISP</span>
@@ -266,7 +269,7 @@
             <span class="chip">BricsCAD</span>
           </div>
           <div class="project-links">
-            <a href="mailto:laurirekola@icloud.com?subject=AutoCAD-piirtotyokalut">Kysy lisää tästä →</a>
+            <a href="mailto:laurirekola@icloud.com?subject=AutoCAD-piirtotyokalut">Katso yleiskuvaus →</a>
           </div>
         </div>
       </article>
@@ -274,9 +277,8 @@
       <!-- Työkalusivusto -->
       <article class="project-card reveal">
         <div class="project-thumb">
-          <img src="assets/projects/suunnittelutyokalut.png" alt="Työkalujen esittelysivuston näkymä" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
-          <div class="project-mock" style="display:none;">
-            <svg viewBox="0 0 480 270" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Web-sivusto työkalujen esittelyyn ja ohjeistukseen">
+          <div class="project-mock">
+            <svg viewBox="0 0 480 270" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Kuvitus: web-pohjainen tuki- ja dokumentaatiosivusto">
               <rect x="40" y="30" width="400" height="210" rx="5" fill="rgba(20,8,32,0.6)" stroke="#5e5d78" stroke-width="1"/>
               <rect x="40" y="30" width="400" height="30" rx="5" fill="rgba(255,42,109,0.05)"/>
               <g fill="#5e5d78">
@@ -300,6 +302,7 @@
               </g>
             </svg>
           </div>
+          <span class="project-caption">Anonymisoitu yleiskuva</span>
         </div>
         <div class="project-body">
           <div class="project-meta">
@@ -308,19 +311,21 @@
           </div>
           <h3>Työkalujen esittelysivusto</h3>
           <p class="case-line"><span class="case-tag">Ongelma</span> Hyvätkin työkalut jäävät käyttämättä, jos kukaan ei tiedä miten ne toimivat.</p>
-          <p class="case-line"><span class="case-tag">Ratkaisu</span> Kevyt web-sivusto joka esittelee työkalut, ohjeistaa käytön ja tarjoaa ne ladattavaksi. Selkeä käyttöliittymä, animoidut esimerkit, toimii puhelimella. Tehty ilman frameworkia — nopea ja helppo ylläpitää. Tämäkin sivu on tehty samalla pohjalla.</p>
+          <p class="case-line"><span class="case-tag">Ratkaisu</span> Kevyt web-pohjainen tuki- ja dokumentaatiosivusto: työkalujen käyttöohjeet, käyttöönotto ja esittelyt samassa paikassa. Selkeä käyttöliittymä, animoidut esimerkit, toimii puhelimella. Tehty ilman frameworkia, joten ylläpito on nopeaa. Tämäkin sivu on samaa pohjaa.</p>
+          <p class="case-line"><span class="case-tag case-tag--hyoty">Hyöty</span> Madaltaa kynnystä ottaa työkalut käyttöön ja tukee suunnittelutyötä arjessa.</p>
           <p class="role-line">
             <span class="role-kicker">Rooli</span>
-            Suunnittelu, ulkoasu ja toteutus alusta loppuun
+            Suunnittelu, ulkoasu, sisältö ja toteutus alusta loppuun
           </p>
           <div class="tech-chips">
             <span class="chip">HTML / CSS / JS</span>
             <span class="chip">Responsiivinen</span>
             <span class="chip">UI / UX</span>
+            <span class="chip">Dokumentaatio</span>
             <span class="chip">SVG-animaatiot</span>
           </div>
           <div class="project-links">
-            <a href="mailto:laurirekola@icloud.com?subject=Tyokalusivusto">Kysy lisää tästä →</a>
+            <a href="mailto:laurirekola@icloud.com?subject=Tyokalusivusto">Tutustu projektiin →</a>
           </div>
         </div>
       </article>
@@ -346,7 +351,7 @@
         </p>
       </div>
       <div class="about-block reveal">
-        <h3>Mitä tykkään tehä</h3>
+        <h3>Mitä tykkään tehdä</h3>
         <p>
           Koodaan omalla ajalla, mutta yhtä lailla tykkään rakennella ja
           korjata käsillä. Rakennan autoa — erityisesti moottoria — ja siinä
@@ -361,8 +366,9 @@
         <p>
           Haluan kehittyä teknisessä suunnittelussa, tietomallikoordinoinnissa
           ja CAD/BIM-automaatiossa. Suunnittelijan arjen tunteminen yhdistettynä
-          koodaustaitoon on yhdistelmä, jolla tietomallit pysyvät ajan tasalla
-          ilman loputonta käsityötä — sitä työtä haluan tehdä.
+          koodaustaitoon on yhdistelmä, jolla rakennan työnkulkuja: niillä
+          CAD-aineisto saadaan helpommin tarkastettavaan BIM-muotoon ja
+          käsityön määrä vähenee. Sitä työtä haluan tehdä.
         </p>
       </div>
     </div>
@@ -434,6 +440,16 @@
             <button class="copy-btn" type="button" data-copy="laurirekola@icloud.com" aria-label="Kopioi sähköposti">copy</button>
           </span>
         </li>
+        <!-- Kun CV-PDF / LinkedIn on valmis, poista kommentit ja täytä polut:
+        <li>
+          <span class="contact-label">cv</span>
+          <span class="contact-value"><a href="assets/cv-lauri-rekola.pdf" download>Lataa CV (PDF) →</a></span>
+        </li>
+        <li>
+          <span class="contact-label">linkedin</span>
+          <span class="contact-value"><a href="https://www.linkedin.com/in/KAYTTAJANIMI/" target="_blank" rel="noopener">linkedin.com/in/…</a></span>
+        </li>
+        -->
         <li>
           <span class="contact-label">status</span>
           <span class="contact-value">opiskelee · etsii harjoittelu- tai junior-paikkaa</span>
@@ -450,7 +466,7 @@
 </div>
 
 <footer class="site-footer">
-  © 2026 Lauri Rekola · built with <span class="accent">vanilla html</span> + caffeine
+  © 2026 Lauri Rekola · built with <span class="accent">vanilla HTML/CSS/JS</span> + caffeine
 </footer>
 
 <script src="script.js?v=2"></script>
