@@ -371,6 +371,19 @@ a { color: var(--magenta); text-decoration: none; }
 
 .hero-subtitle .accent { color: var(--cyan); }
 
+.hero-pitch {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(21px, 2.5vw, 27px);
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  max-width: 660px;
+  margin: 4px auto 20px;
+}
+
+.hero-pitch .accent { color: var(--cyan); }
+
 .hero-cta {
   display: flex;
   gap: 14px;
@@ -462,6 +475,38 @@ a { color: var(--magenta); text-decoration: none; }
   font-size: 15px;
   line-height: 1.65;
   color: var(--text-dim);
+}
+
+/* Tarkoituksellinen anonymisointi-huomio (projektiosio) */
+.privacy-note {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  max-width: 680px;
+  margin: -8px 0 36px;
+  padding: 14px 16px;
+  background: var(--cyan-bg);
+  border: 1px solid var(--border-dim);
+  border-left: 2px solid var(--cyan);
+  border-radius: 6px;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--text-dim);
+}
+
+.privacy-note__tag {
+  flex-shrink: 0;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  background: rgba(5, 217, 232, 0.08);
+  border: 1px solid var(--cyan-dim);
+  border-radius: 3px;
+  padding: 3px 8px;
+  margin-top: 1px;
 }
 
 /* ---------- Value cards (mitä tuon mukanani) ---------- */
@@ -703,6 +748,7 @@ a { color: var(--magenta); text-decoration: none; }
 }
 
 .case-line {
+  margin: 0;
   font-size: 13.5px;
   line-height: 1.6;
 }
@@ -721,28 +767,16 @@ a { color: var(--magenta); text-decoration: none; }
   border-radius: 3px;
 }
 
-/* Hyöty-rivi erottuu cyanilla — se on kortin "myyntipointti" */
+/* Hyöty / Lopputulos erottuu cyanilla — kortin "myyntipointti" */
 .case-tag--hyoty {
   color: var(--cyan);
   border-color: var(--cyan-dim);
 }
 
-.role-line {
-  margin: 4px 0 0 0;
-  font-size: 13px;
-  color: var(--text-dim);
-  line-height: 1.55;
-}
-
-.role-line .role-kicker {
-  display: inline;
-  font-family: 'JetBrains Mono', ui-monospace, monospace;
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--cyan);
-  margin-right: 8px;
+/* Rooli erottuu amberilla — oma osuus projektissa */
+.case-tag--role {
+  color: var(--amber);
+  border-color: rgba(255, 217, 61, 0.4);
 }
 
 .tech-chips {
@@ -831,6 +865,13 @@ a { color: var(--magenta); text-decoration: none; }
   letter-spacing: -0.01em;
   margin: 0;
   color: var(--text);
+}
+
+/* 3 rivin tiivistelmä case-osion alussa — nopealle lukijalle */
+.case-summary {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 22px;
 }
 
 /* Process flow -- vaakasuuntainen prosessikaavio */

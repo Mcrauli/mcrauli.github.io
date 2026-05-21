@@ -52,10 +52,11 @@ Rento ja persoonallinen, slangia. "Moi! Oon Lauri", "kuluttavaa", "kavereille",
 
 ## Rakenne (1-page)
 
-1. **Hero** (`#top`) — kicker "Tekninen suunnittelu × CAD/BIM-automaatio" + h1 LAURI REKOLA (glitch, keskitetty) + tagline polku + subtitle + CTA
+1. **Hero** (`#top`) — kicker "Tekninen suunnittelu × CAD/BIM-automaatio" + h1 LAURI REKOLA (glitch, keskitetty) + tagline polku + `.hero-pitch` (vahva myyntilause) + subtitle + CTA
 2. **Vahvuudet** (`#vahvuudet`) — "Mitä tuon mukanani", 3 value-cardia (01/02/03) työnantaja-näkökulmasta
-3. **Työt** (`#tyot`) — section-lead + 3 projektikorttia case-muodossa
-4. **Caset** (`#caset`) — 3 case-study-osiota. Jokaisessa: työnkulku-
+3. **Työt** (`#tyot`) — `.privacy-note` (tarkoituksellinen anonymisointi-huomio) + 3 projektikorttia case-muodossa
+4. **Caset** (`#caset`) — 3 case-study-osiota. Jokaisessa: `.case-summary`
+   (3 rivin Ongelma/Ratkaisu/Lopputulos -tiivistelmä) + työnkulku-
    diagrammi (`.flow`, CSS-pohjainen 5-vaiheinen prosessikaavio) +
    `.case-grid` (Lähtötilanne / Ratkaisu / Hyöty / Rajaus) + `.case-foot`
    (teknologiat + mailto-CTA). Ankkurit: `#dxf2ifc-case`,
@@ -75,9 +76,9 @@ Per-projekti kortti sisältää:
   "SVG-kuvitus työkalun ideasta", "Anonymisoitu yleiskuva".
 - Status-badge kategoria (`PYTHON · BIM`, `CAD-AUTOMAATIO`, `WEB`)
 - Year-badge ("2024 →")
-- Case-rivit: `.case-line` joissa `.case-tag` (Ongelma / Ratkaisu / Hyöty);
-  Hyöty-rivi käyttää `.case-tag--hyoty` cyan-varianttia (kortin myyntipointti)
-- ROOLI-rivi
+- Case-rivit: `.case-line` + `.case-tag`, neljä kpl: Ongelma & Ratkaisu
+  (magenta), Hyöty (`.case-tag--hyoty`, cyan), Rooli (`.case-tag--role`,
+  amber). Tagimainen ulkoasu = nopeasti silmäiltävä.
 - Tech-chipit
 - CTA: ankkurilinkki saman sivun case-osioon (`#dxf2ifc-case` jne.),
   esim. "Katso työnkulku →", "Katso yleiskuvaus →", "Tutustu projektiin →".

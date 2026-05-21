@@ -26,7 +26,7 @@
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=7">
+<link rel="stylesheet" href="style.css?v=8">
 
 <script type="application/ld+json">
 {
@@ -95,12 +95,16 @@
     <div class="hero-kicker">Tekninen suunnittelu × CAD/BIM-automaatio</div>
     <h1 data-text="Lauri Rekola">Lauri Rekola</h1>
     <p class="hero-tagline">
-      opiskelija <span class="arrow">→</span> tekninen suunnittelu <span class="arrow">→</span> tietomallikoordinointi
+      tekninen suunnittelu <span class="arrow">→</span> CAD/BIM-automaatio <span class="arrow">→</span> tietomallikoordinointi
+    </p>
+    <p class="hero-pitch">
+      Rakennan työkaluja, jotka muuttavat toistuvan
+      <span class="accent">CAD/BIM-käsityön</span> selkeäksi työnkuluksi.
     </p>
     <p class="hero-subtitle">
-      Moi! Oon teknisen suunnittelun opiskelija ja teen
-      <span class="accent">CAD- ja BIM-automaatiota</span> — käytännön työkaluja
-      jotka karsivat toistuvaa käsityötä suunnittelusta. Pythonilla,
+      Moi! Oon teknisen suunnittelun opiskelija. Tykkään eniten
+      <span class="accent">CAD/BIM-automaatiosta</span> ja
+      tietomallikoordinoinnista — ja rakennan työkaluni itse Pythonilla,
       AutoCAD LISPillä ja web-tekniikoilla.
     </p>
     <div class="hero-cta">
@@ -154,10 +158,11 @@
   <section class="section" id="tyot">
     <div class="section-kicker">projects</div>
     <h2>Mitä oon <span class="accent">tehnyt</span></h2>
-    <p class="section-lead">
-      Työkalut on tehty suunnittelutyön tueksi työympäristössä, joten
-      esittelen ne yleisellä tasolla — idea, toteutus ja lopputulos.
-      Lähdekoodi ja sisäiset yksityiskohdat pidän pois julkisuudesta.
+    <p class="privacy-note">
+      <span class="privacy-note__tag">Anonymisoitu</span>
+      Projektit on esitetty yleiskuvauksina, koska työkalut liittyvät
+      työympäristöön. Julkinen kuvaus keskittyy ongelmaan, ratkaisuun ja
+      työnkulkuun — ei lähdekoodiin tai sisäisiin asetuksiin.
     </p>
 
     <div class="projects-grid">
@@ -207,10 +212,7 @@
           <p class="case-line"><span class="case-tag">Ongelma</span> CAD-aineiston vienti tietomalliksi on hidasta käsityötä — tasot ja ominaisuudet mäpätään erikseen joka kerta.</p>
           <p class="case-line"><span class="case-tag">Ratkaisu</span> Python-työkalu joka lukee DXF/DWG-piirustuksen ja muodostaa siitä IFC4-koordinaatiomallin. Mäppäys rakentuu CAD-tasojen pohjalle ja elementeille viedään property set -tyyppistä tietoa. Lopputulos avautuu tarkastettavaksi esimerkiksi Solibrissa.</p>
           <p class="case-line"><span class="case-tag case-tag--hyoty">Hyöty</span> Vähentää manuaalista CAD → BIM -työtä ja tekee aineiston siirrosta toistettavaa — tukena tietomallikoordinoinnissa.</p>
-          <p class="role-line">
-            <span class="role-kicker">Rooli</span>
-            Idea, toteutus ja käyttöliittymä — Python ja IfcOpenShell, oma GUI
-          </p>
+          <p class="case-line"><span class="case-tag case-tag--role">Rooli</span> Idea, toteutus ja käyttöliittymä — Python ja IfcOpenShell, oma GUI.</p>
           <div class="tech-chips">
             <span class="chip">Python</span>
             <span class="chip">IfcOpenShell</span>
@@ -267,10 +269,7 @@
           <p class="case-line"><span class="case-tag">Ongelma</span> Sama piirtotyö toistuu sadasti — komponentit, tasot ja merkinnät asetetaan käsin joka kerta.</p>
           <p class="case-line"><span class="case-tag">Ratkaisu</span> Työkalupaketti, jossa toistuvat piirto- ja muokkausvaiheet hoituvat valmiilla komennoilla. Komennot löytyvät omasta ribbon-välilehdestä, ja asennus on tehty helpoksi — paketin saa käyttöön myös kollegan koneella.</p>
           <p class="case-line"><span class="case-tag case-tag--hyoty">Hyöty</span> Nopeuttaa suunnittelijan arkea ja pitää piirrosjäljen yhtenäisenä tekijästä riippumatta.</p>
-          <p class="role-line">
-            <span class="role-kicker">Rooli</span>
-            Suunnittelin komennot suunnittelijan näkökulmasta, toteutin ne LISPillä ja paketoin asennettaviksi
-          </p>
+          <p class="case-line"><span class="case-tag case-tag--role">Rooli</span> Suunnittelin komennot suunnittelijan näkökulmasta, toteutin ne LISPillä ja paketoin asennettaviksi.</p>
           <div class="tech-chips">
             <span class="chip">AutoCAD LISP</span>
             <span class="chip">CAD-automaatio</span>
@@ -322,10 +321,7 @@
           <p class="case-line"><span class="case-tag">Ongelma</span> Hyvätkin työkalut jäävät käyttämättä, jos kukaan ei tiedä miten ne toimivat.</p>
           <p class="case-line"><span class="case-tag">Ratkaisu</span> Kevyt web-pohjainen tuki- ja dokumentaatiosivusto: työkalujen käyttöohjeet, käyttöönotto ja esittelyt samassa paikassa. Selkeä käyttöliittymä, animoidut esimerkit, toimii puhelimella. Tehty ilman frameworkia, joten ylläpito on nopeaa. Tämäkin sivu on samaa pohjaa.</p>
           <p class="case-line"><span class="case-tag case-tag--hyoty">Hyöty</span> Madaltaa kynnystä ottaa työkalut käyttöön ja tukee suunnittelutyötä arjessa.</p>
-          <p class="role-line">
-            <span class="role-kicker">Rooli</span>
-            Suunnittelu, ulkoasu, sisältö ja toteutus alusta loppuun
-          </p>
+          <p class="case-line"><span class="case-tag case-tag--role">Rooli</span> Suunnittelu, ulkoasu, sisältö ja toteutus alusta loppuun.</p>
           <div class="tech-chips">
             <span class="chip">HTML / CSS / JS</span>
             <span class="chip">Responsiivinen</span>
@@ -359,6 +355,12 @@
       <div class="case-head">
         <span class="case-index">case 01</span>
         <h3>DXF/DWG → IFC4 -työnkulku</h3>
+      </div>
+
+      <div class="case-summary">
+        <p class="case-line"><span class="case-tag">Ongelma</span> CAD-aineiston vieminen BIM-tarkasteluun vaatii helposti käsityötä.</p>
+        <p class="case-line"><span class="case-tag">Ratkaisu</span> Python- ja IfcOpenShell-pohjainen työnkulku, joka vie DXF/DWG-pohjaista tietoa kohti IFC4-koordinaatiomallia.</p>
+        <p class="case-line"><span class="case-tag case-tag--hyoty">Lopputulos</span> Toistettavampi prosessi, vähemmän manuaalista työtä ja helpompi tarkastelu Solibrissa.</p>
       </div>
 
       <ol class="flow" aria-label="DXF/DWG–IFC4-työnkulun vaiheet">
@@ -401,6 +403,12 @@
         <h3>AutoCAD LISP -piirtotyökalut</h3>
       </div>
 
+      <div class="case-summary">
+        <p class="case-line"><span class="case-tag">Ongelma</span> Toistuvat CAD-piirto- ja muokkausvaiheet vievät aikaa.</p>
+        <p class="case-line"><span class="case-tag">Ratkaisu</span> AutoCAD LISP -pohjainen työkalupaketti, joka kokoaa komentoja ja työnkulkuja helpommin käytettäväksi.</p>
+        <p class="case-line"><span class="case-tag case-tag--hyoty">Lopputulos</span> Nopeampi, vakioidumpi ja helpommin käyttöönotettava CAD-työnkulku.</p>
+      </div>
+
       <ol class="flow" aria-label="AutoCAD-piirtotyökalujen työnkulun vaiheet">
         <li class="flow-step"><span class="flow-num">1</span>Toistuva piirtotyö</li>
         <li class="flow-step"><span class="flow-num">2</span>LISP-komento</li>
@@ -439,6 +447,12 @@
       <div class="case-head">
         <span class="case-index">case 03</span>
         <h3>Suunnittelutyökalujen tukisivusto</h3>
+      </div>
+
+      <div class="case-summary">
+        <p class="case-line"><span class="case-tag">Ongelma</span> Sisäiset työkalut ja ohjeet voivat hajautua useaan paikkaan.</p>
+        <p class="case-line"><span class="case-tag">Ratkaisu</span> Kevyt web-pohjainen tukisivusto työkalujen dokumentointiin ja käyttöönoton tueksi.</p>
+        <p class="case-line"><span class="case-tag case-tag--hyoty">Lopputulos</span> Selkeämpi ohjeistus, helpompi käyttöönotto ja parempi löydettävyys.</p>
       </div>
 
       <ol class="flow" aria-label="Tukisivuston työnkulun vaiheet">
@@ -538,7 +552,7 @@
         <li>Tietomallit / BIM</li>
         <li>Solibri</li>
         <li>DXF / DWG</li>
-        <li>Talotekniikan suunnittelu</li>
+        <li>Talotekniikan suunnittelutyönkulut</li>
       </ul>
     </div>
 
@@ -571,8 +585,9 @@
     <div class="contact-card reveal">
       <p class="contact-intro">
         Etsin teknisen suunnittelun harjoittelu- tai junior-paikkaa, jossa
-        pääsen CAD/BIM-automaation ja tietomallinnuksen pariin. Jos kuulostaa
-        siltä että voisin olla avuksi, laitetaan viestiä.
+        pääsen yhdistämään CAD/BIM-työtä, tietomallien tarkastelua ja
+        suunnittelutyön automatisointia. Jos kuulostaa siltä että voisin
+        olla avuksi, laitetaan viestiä.
       </p>
       <ul class="contact-list">
         <li>
