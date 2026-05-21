@@ -307,7 +307,7 @@ a { color: var(--magenta); text-decoration: none; }
   color: var(--text);
   text-transform: uppercase;
   position: relative;
-  display: inline-block;
+  display: block;
 }
 
 /* Glitch-efekti hero-h1:lle */
