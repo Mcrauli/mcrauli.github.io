@@ -64,7 +64,9 @@ Rento ja persoonallinen, slangia. "Moi! Oon Lauri", "kuluttavaa", "kavereille",
    (vältetään topnavin ahtautta) — saavutetaan projektikorttien CTA:sta.
 5. **Tausta** (`#tausta`) — 3 about-blokkia: Mistä tulen / Mitä tykkään tehdä / Mihin tähtään
 6. **Stäkki** (`#stakki`) — 2 skill-tieria: Pääosaaminen (magenta-chipit) + Tukiosaaminen (himmeämmät)
-7. **Yhteys** (`#yhteys`) — intro + email (copy) + status + sijainti + CTA-nappi
+7. **Yhteys** (`#yhteys`) — intro + email (copy) + status + sijainti +
+   `.contact-actions` (kaksi nappia: "Lataa CV (PDF)" btn-primary →
+   `assets/Lauri_Rekola_CV.pdf`, "Laita viestiä" btn-secondary → mailto)
 8. **Footer** — minimal
 
 ## Projektikortit
@@ -100,11 +102,18 @@ screenshotteja ei julkaista. SVG-kuvitukset ovat lopullinen ratkaisu —
 
 OG-image (`assets/og-image.png`, 1200×630) sosiaalisten medioiden esikatselua varten.
 
+CV: `assets/Lauri_Rekola_CV.pdf` = **julkinen 1-sivuinen versio ILMAN
+puhelinnumeroa** (spämmiriski). Lähde + 2-sivuinen varaversio +
+puhelinnumerollinen hakemusversio ovat repon ULKOPUOLELLA kansiossa
+`work/cv/` — katso muisti `project_cv_lauri`. Sivulle linkataan vain
+julkinen 1-sivuinen.
+
 ## Periaatteet
 
 - Vanilla HTML/CSS/JS — ei frameworkia
 - Ei tracking-scriptejä eikä analyticsia
-- Ei latauspainikkeita eikä GitHub-linkkejä — vain esittely, "kysy lisää" → email
+- Ei GitHub-linkkejä. Ainoa lataus on CV-PDF yhteysosiossa; projektit
+  esitellään, ei jaeta (ei koodia/repoja/lataus-paketteja)
 - Cache-bust `?v=N` -parametri CSS/JS-linkkeihin muutosten yhteydessä
 - ASCII-only ei vaadittu (toisin kuin installer-skripteissä) — tämä on HTML/CSS
 
@@ -122,5 +131,4 @@ Push main-branchiin → GitHub Pages päivittyy ~1–2 min.
 
 - Per-projekti case-study sivut: `projects/dxf2ifc.html` jne. — read-only,
   ilman GitHub- tai lataa-linkkejä, screenshot-galleria
-- CV-PDF lataus contact-osioon
 - Read-only kopio Suunnittelutyökalut-sivusta jossa lataa-napit on poistettu

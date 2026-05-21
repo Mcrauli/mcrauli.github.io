@@ -1146,7 +1146,10 @@ a { color: var(--magenta); text-decoration: none; }
   position: relative;
 }
 
-.contact-cta {
+.contact-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
   margin-top: 26px;
   position: relative;
 }
