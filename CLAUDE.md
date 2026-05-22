@@ -47,9 +47,10 @@ mutta Mono-fonttia paljon enemmän koodaaja-vibea varten.
 
 ## Ääni / tyyli
 
-Lämmin ja persoonallinen, minä-muotoinen — mutta viimeistelty työnhakuun.
-"Moi!" säilyy, mutta kirjakieli: **"olen" (ei "oon"), "minä" (ei "mä")**.
-Otsikot puhuttelevia ("Mitä olen tehnyt", "Kuka olen"). EI korporaatiojargonia.
+Asiallinen, selkeä ja rauhallisen itsevarma — käytännönläheinen, ei
+puhekielinen eikä korporaatiomainen. Kirjakieli ("olen", ei "oon"; ei
+"Moi!", ei "tykkään"/"läppä"). Esittelee tekemisen ilman ylisanoja tai
+julistavuutta. Persoona näkyy sisällössä ja konkretiassa, ei sanaleikeissä.
 
 ## Rakenne (1-page)
 
