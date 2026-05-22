@@ -47,8 +47,9 @@ mutta Mono-fonttia paljon enemmän koodaaja-vibea varten.
 
 ## Ääni / tyyli
 
-Rento ja persoonallinen, slangia. "Moi! Oon Lauri", "kuluttavaa", "kavereille",
-"tykkään tehdä". Suomenkielinen, käyttäjän omalla puheentyylillä.
+Lämmin ja persoonallinen, minä-muotoinen — mutta viimeistelty työnhakuun.
+"Moi!" säilyy, mutta kirjakieli: **"olen" (ei "oon"), "minä" (ei "mä")**.
+Otsikot puhuttelevia ("Mitä olen tehnyt", "Kuka olen"). EI korporaatiojargonia.
 
 ## Rakenne (1-page)
 
@@ -63,7 +64,7 @@ Rento ja persoonallinen, slangia. "Moi! Oon Lauri", "kuluttavaa", "kavereille",
    `#autocad-lisp-case`, `#suunnittelutyokalut-case`. EI omaa nav-linkkiä
    (vältetään topnavin ahtautta) — saavutetaan projektikorttien CTA:sta.
 5. **Tausta** (`#tausta`) — 3 about-blokkia: Mistä tulen / Mitä tykkään tehdä / Mihin tähtään
-6. **Stäkki** (`#stakki`) — 2 skill-tieria: Pääosaaminen (magenta-chipit) + Tukiosaaminen (himmeämmät)
+6. **Osaaminen** (`#osaaminen`) — 2 skill-tieria: Pääosaaminen (magenta-chipit) + Tukiosaaminen (himmeämmät)
 7. **Yhteys** (`#yhteys`) — intro + email (copy) + status + sijainti +
    `.contact-actions` (kaksi nappia: "Lataa CV (PDF)" btn-primary →
    `assets/Lauri_Rekola_CV.pdf`, "Laita viestiä" btn-secondary → mailto)
