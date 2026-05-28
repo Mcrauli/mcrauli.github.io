@@ -113,17 +113,22 @@
       mobileNav.classList.add('open');
       hamburger.setAttribute('aria-expanded', 'true');
       mobileNav.setAttribute('aria-hidden', 'false');
+      const firstLink = mobileNav.querySelector('a');
+      if (firstLink) firstLink.focus();
     };
     const closeMenu = () => {
+      if (!mobileNav.classList.contains('open')) return;
       mobileNav.classList.remove('open');
       hamburger.setAttribute('aria-expanded', 'false');
       mobileNav.setAttribute('aria-hidden', 'true');
+      hamburger.focus();
     };
     hamburger.addEventListener('click', () => {
       mobileNav.classList.contains('open') ? closeMenu() : openMenu();
     });
     mobileNav.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
     window.addEventListener('resize', () => { if (window.innerWidth > 540) closeMenu(); }, { passive: true });
+    window.addEventListener('scroll', closeMenu, { passive: true });
   }
 
   /* ----- Email copy-to-clipboard ----- */
