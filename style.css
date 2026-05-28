@@ -355,14 +355,14 @@ a { color: var(--magenta); text-decoration: none; }
 .hero h1::before {
   color: var(--magenta);
   z-index: -1;
-  animation: glitch-shift-a 6s steps(2) infinite;
+  animation: glitch-shift-a 12s steps(2) infinite;
   mix-blend-mode: screen;
 }
 
 .hero h1::after {
   color: var(--cyan);
   z-index: -2;
-  animation: glitch-shift-b 6s steps(2) infinite;
+  animation: glitch-shift-b 12s steps(2) infinite;
   mix-blend-mode: screen;
 }
 
@@ -704,6 +704,7 @@ a { color: var(--magenta); text-decoration: none; }
 }
 
 .year-badge {
+  border: 1px solid var(--border-dim);
   color: var(--text-faint);
   font-weight: 500;
 }
