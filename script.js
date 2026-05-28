@@ -108,6 +108,16 @@
     }, { rootMargin: '-30% 0px -55% 0px', threshold: [0, 0.25, 0.5] });
 
     sections.forEach(s => navIO.observe(s.el));
+
+    // Force-activate last section when scrolled to page bottom
+    const lastSection = sections[sections.length - 1];
+    if (lastSection) {
+      window.addEventListener('scroll', () => {
+        if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) {
+          setActive(lastSection.id);
+        }
+      }, { passive: true });
+    }
   }
 
   /* ----- Dynamic footer year ----- */
