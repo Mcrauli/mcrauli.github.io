@@ -133,8 +133,37 @@ a { color: var(--magenta); text-decoration: none; }
 .topnav-links a:hover { color: var(--magenta); }
 .topnav-links a:hover::after { transform: scaleX(1); }
 
-.availability {
+.topnav-right {
   margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-cta {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  border: 1px solid var(--magenta-dim);
+  border-radius: 3px;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--magenta);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.nav-cta:hover {
+  background: var(--magenta-bg);
+  border-color: var(--magenta);
+  box-shadow: 0 0 12px var(--magenta-dim);
+}
+
+.availability {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -164,6 +193,7 @@ a { color: var(--magenta); text-decoration: none; }
   .topnav { gap: 16px; padding: 0 16px; }
   .brand-text { display: none; }
   .topnav-links { gap: 16px; }
+  .nav-cta { display: none; }
   .availability { display: none; }
 }
 
@@ -245,7 +275,6 @@ a { color: var(--magenta); text-decoration: none; }
   min-width: 200px;
   background: rgba(8, 2, 14, 0.95);
   border: 1px solid var(--magenta-dim);
-  border-left: 3px solid var(--magenta);
   border-radius: 4px;
   color: var(--text);
   font-size: 12px;
@@ -351,26 +380,6 @@ a { color: var(--magenta); text-decoration: none; }
   95% { transform: translate(1px, 0); opacity: 1; }
 }
 
-.hero-tagline {
-  font-family: 'JetBrains Mono', ui-monospace, monospace;
-  font-size: 14px;
-  color: var(--text-dim);
-  letter-spacing: 0.04em;
-  margin: 0 0 32px 0;
-}
-
-.hero-tagline .arrow { color: var(--magenta); margin: 0 8px; }
-
-.hero-subtitle {
-  font-size: clamp(17px, 1.8vw, 19px);
-  line-height: 1.7;
-  color: var(--text);
-  max-width: 640px;
-  margin: 0 auto 36px;
-}
-
-.hero-subtitle .accent { color: var(--cyan); }
-
 .hero-pitch {
   font-family: 'Space Grotesk', sans-serif;
   font-size: clamp(21px, 2.5vw, 27px);
@@ -475,38 +484,6 @@ a { color: var(--magenta); text-decoration: none; }
   font-size: 15px;
   line-height: 1.65;
   color: var(--text-dim);
-}
-
-/* Tarkoituksellinen anonymisointi-huomio (projektiosio) */
-.privacy-note {
-  display: flex;
-  gap: 12px;
-  align-items: flex-start;
-  max-width: 680px;
-  margin: -8px 0 36px;
-  padding: 14px 16px;
-  background: var(--cyan-bg);
-  border: 1px solid var(--border-dim);
-  border-left: 2px solid var(--cyan);
-  border-radius: 6px;
-  font-size: 13.5px;
-  line-height: 1.6;
-  color: var(--text-dim);
-}
-
-.privacy-note__tag {
-  flex-shrink: 0;
-  font-family: 'JetBrains Mono', ui-monospace, monospace;
-  font-size: 9.5px;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--cyan);
-  background: rgba(5, 217, 232, 0.08);
-  border: 1px solid var(--cyan-dim);
-  border-radius: 3px;
-  padding: 3px 8px;
-  margin-top: 1px;
 }
 
 /* ---------- Value cards (mitä tuon mukanani) ---------- */
@@ -832,8 +809,7 @@ a { color: var(--magenta); text-decoration: none; }
   padding: 28px 30px;
   margin-bottom: 22px;
   background: var(--bg-card);
-  border: 1px solid var(--border-dim);
-  border-left: 3px solid var(--magenta);
+  border: 1px solid var(--magenta-dim);
   border-radius: 8px;
 }
 
@@ -865,13 +841,6 @@ a { color: var(--magenta); text-decoration: none; }
   letter-spacing: -0.01em;
   margin: 0;
   color: var(--text);
-}
-
-/* 3 rivin tiivistelmä case-osion alussa — nopealle lukijalle */
-.case-summary {
-  display: grid;
-  gap: 8px;
-  margin-bottom: 22px;
 }
 
 /* Process flow -- vaakasuuntainen prosessikaavio */

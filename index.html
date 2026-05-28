@@ -26,7 +26,7 @@
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=9">
+<link rel="stylesheet" href="style.css?v=10">
 
 <script type="application/ld+json">
 {
@@ -76,10 +76,13 @@
     <a href="#osaaminen">/osaaminen</a>
     <a href="#yhteys">/yhteys</a>
   </div>
-  <span class="availability">
-    <span class="availability-dot"></span>
-    avoinna · etsii harjoittelu- tai junior-paikkaa
-  </span>
+  <div class="topnav-right">
+    <a class="nav-cta" href="#yhteys">Ota yhteyttä</a>
+    <span class="availability">
+      <span class="availability-dot"></span>
+      avoinna · etsii harjoittelu- tai junior-paikkaa
+    </span>
+  </div>
 </nav>
 
 <div class="scroll-progress"><div class="scroll-progress__fill"></div></div>
@@ -94,19 +97,9 @@
   <header class="hero" id="top">
     <div class="hero-kicker">Tekninen suunnittelu × CAD/BIM-automaatio</div>
     <h1 data-text="Lauri Rekola">Lauri Rekola</h1>
-    <p class="hero-tagline">
-      tekninen suunnittelu <span class="arrow">→</span> CAD/BIM-automaatio <span class="arrow">→</span> tietomallikoordinointi
-    </p>
     <p class="hero-pitch">
       Rakennan työkaluja, jotka muuttavat toistuvan
       <span class="accent">CAD/BIM-käsityön</span> selkeäksi työnkuluksi.
-    </p>
-    <p class="hero-subtitle">
-      Olen teknisen suunnittelun opiskelija, jonka kiinnostus kohdistuu
-      <span class="accent">CAD/BIM-työnkulkujen kehittämiseen</span>,
-      tietomallien tarkasteluun ja suunnittelutyön automatisointiin.
-      Rakennan käytännönläheisiä työkaluja Pythonilla, AutoCAD LISPillä
-      ja web-tekniikoilla.
     </p>
     <div class="hero-cta">
       <a class="btn btn-primary" href="#tyot">Katso työt ↓</a>
@@ -161,13 +154,6 @@
   <section class="section" id="tyot">
     <div class="section-kicker">projects</div>
     <h2>Mitä olen <span class="accent">tehnyt</span></h2>
-    <p class="privacy-note">
-      <span class="privacy-note__tag">Anonymisoitu</span>
-      Projektit on esitetty yleiskuvauksina, koska työkalut liittyvät
-      työympäristöön. Julkinen kuvaus keskittyy ongelmaan, ratkaisuun ja
-      työnkulkuun — ei lähdekoodiin tai sisäisiin asetuksiin.
-    </p>
-
     <div class="projects-grid">
 
       <!-- dxf2ifc -->
@@ -360,12 +346,6 @@
         <h3>DXF/DWG → IFC4 -työnkulku</h3>
       </div>
 
-      <div class="case-summary">
-        <p class="case-line"><span class="case-tag">Ongelma</span> CAD-aineiston vieminen BIM-tarkasteluun vaatii helposti käsityötä.</p>
-        <p class="case-line"><span class="case-tag">Ratkaisu</span> Python- ja IfcOpenShell-pohjainen työnkulku, joka vie DXF/DWG-pohjaista tietoa kohti IFC4-koordinaatiomallia.</p>
-        <p class="case-line"><span class="case-tag case-tag--hyoty">Lopputulos</span> Toistettavampi prosessi, vähemmän manuaalista työtä ja helpompi tarkastelu Solibrissa.</p>
-      </div>
-
       <ol class="flow" aria-label="DXF/DWG–IFC4-työnkulun vaiheet">
         <li class="flow-step"><span class="flow-num">1</span>CAD-aineisto</li>
         <li class="flow-step"><span class="flow-num">2</span>Layer-mappaus</li>
@@ -406,12 +386,6 @@
         <h3>AutoCAD LISP -piirtotyökalut</h3>
       </div>
 
-      <div class="case-summary">
-        <p class="case-line"><span class="case-tag">Ongelma</span> Toistuvat CAD-piirto- ja muokkausvaiheet vievät aikaa.</p>
-        <p class="case-line"><span class="case-tag">Ratkaisu</span> AutoCAD LISP -pohjainen työkalupaketti, joka kokoaa komentoja ja työnkulkuja helpommin käytettäväksi.</p>
-        <p class="case-line"><span class="case-tag case-tag--hyoty">Lopputulos</span> Nopeampi, vakioidumpi ja helpommin käyttöönotettava CAD-työnkulku.</p>
-      </div>
-
       <ol class="flow" aria-label="AutoCAD-piirtotyökalujen työnkulun vaiheet">
         <li class="flow-step"><span class="flow-num">1</span>Toistuva piirtotyö</li>
         <li class="flow-step"><span class="flow-num">2</span>LISP-komento</li>
@@ -450,12 +424,6 @@
       <div class="case-head">
         <span class="case-index">case 03</span>
         <h3>Suunnittelutyökalujen tukisivusto</h3>
-      </div>
-
-      <div class="case-summary">
-        <p class="case-line"><span class="case-tag">Ongelma</span> Sisäiset työkalut ja ohjeet voivat hajautua useaan paikkaan.</p>
-        <p class="case-line"><span class="case-tag">Ratkaisu</span> Kevyt web-pohjainen tukisivusto työkalujen dokumentointiin ja käyttöönoton tueksi.</p>
-        <p class="case-line"><span class="case-tag case-tag--hyoty">Lopputulos</span> Selkeämpi ohjeistus, helpompi käyttöönotto ja parempi löydettävyys.</p>
       </div>
 
       <ol class="flow" aria-label="Tukisivuston työnkulun vaiheet">
