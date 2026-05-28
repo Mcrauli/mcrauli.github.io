@@ -1154,7 +1154,8 @@ a { color: var(--magenta); text-decoration: none; }
   background: var(--magenta-bg);
 }
 
-.chips-primary li:hover {
+.chips-primary li:hover,
+.chips-primary li:active {
   border-color: var(--magenta);
   color: var(--magenta);
 }
@@ -1169,7 +1170,8 @@ a { color: var(--magenta); text-decoration: none; }
   background: transparent;
 }
 
-.chips-support li:hover {
+.chips-support li:hover,
+.chips-support li:active {
   border-color: var(--cyan-dim);
   color: var(--cyan);
 }

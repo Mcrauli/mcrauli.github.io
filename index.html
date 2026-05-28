@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#08020e">
-<meta name="description" content="Lauri Rekola — teknisen suunnittelun opiskelija. CAD- ja BIM-automaatio, AutoCAD LISP, Python, IFC. Etsii harjoittelu- tai junior-paikkaa teknisen suunnittelun parista.">
+<meta name="description" content="Lauri Rekola: teknisen suunnittelun opiskelija. CAD- ja BIM-automaatio, AutoCAD LISP, Python, IFC. Etsii harjoittelu- tai junior-paikkaa teknisen suunnittelun parista.">
 <meta name="author" content="Lauri Rekola">
 
 <meta property="og:title" content="Lauri Rekola · Tekninen suunnittelu & CAD/BIM-automaatio">
@@ -25,8 +25,10 @@
 
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=14">
+<link rel="stylesheet" href="style.css?v=15">
 
 <script type="application/ld+json">
 {
@@ -212,10 +214,10 @@
             <span class="year-badge">2024 →</span>
           </div>
           <h3>DXF/DWG → IFC -konvertteri</h3>
-          <p class="case-line"><span class="case-tag">Ongelma</span> CAD-aineiston vienti tietomalliksi on hidasta käsityötä — tasot ja ominaisuudet mapataan erikseen joka kerta.</p>
+          <p class="case-line"><span class="case-tag">Ongelma</span> CAD-aineiston vienti tietomalliksi on hidasta käsityötä: tasot ja ominaisuudet mapataan erikseen joka kerta.</p>
           <p class="case-line"><span class="case-tag">Ratkaisu</span> Python-työkalu, joka lukee DXF/DWG-piirustuksen ja muodostaa siitä IFC4-koordinaatiomallin. Mappaus rakentuu CAD-tasojen pohjalle, ja elementeille viedään property set -tyyppistä tietoa. Lopputulos avautuu tarkastettavaksi esimerkiksi Solibrissa.</p>
-          <p class="case-line"><span class="case-tag case-tag--hyoty">Hyöty</span> Vähentää manuaalista CAD → BIM -työtä ja tekee aineiston siirrosta toistettavaa — tukena tietomallikoordinoinnissa.</p>
-          <p class="case-line"><span class="case-tag case-tag--role">Rooli</span> Idea, toteutus ja käyttöliittymä — Python ja IfcOpenShell, oma GUI.</p>
+          <p class="case-line"><span class="case-tag case-tag--hyoty">Hyöty</span> Vähentää manuaalista CAD → BIM -työtä ja tekee aineiston siirrosta toistettavaa, tukena tietomallikoordinoinnissa.</p>
+          <p class="case-line"><span class="case-tag case-tag--role">Rooli</span> Idea, toteutus ja käyttöliittymä: Python ja IfcOpenShell, oma GUI.</p>
           <div class="tech-chips">
             <span class="chip">Python</span>
             <span class="chip">IfcOpenShell</span>
@@ -269,8 +271,8 @@
             <span class="year-badge">2024 →</span>
           </div>
           <h3>AutoCAD-piirtotyökalut</h3>
-          <p class="case-line"><span class="case-tag">Ongelma</span> Samat piirtovaiheet toistuvat työssä usein — komponentit, tasot ja merkinnät asetetaan käsin joka kerta.</p>
-          <p class="case-line"><span class="case-tag">Ratkaisu</span> Työkalupaketti, jossa toistuvat piirto- ja muokkausvaiheet hoituvat valmiilla komennoilla. Komennot löytyvät omasta ribbon-välilehdestä, ja asennus on tehty helpoksi — paketin saa käyttöön myös kollegan koneella.</p>
+          <p class="case-line"><span class="case-tag">Ongelma</span> Samat piirtovaiheet toistuvat työssä usein: komponentit, tasot ja merkinnät asetetaan käsin joka kerta.</p>
+          <p class="case-line"><span class="case-tag">Ratkaisu</span> Työkalupaketti, jossa toistuvat piirto- ja muokkausvaiheet hoituvat valmiilla komennoilla. Komennot löytyvät omasta ribbon-välilehdestä, ja asennus on tehty helpoksi: paketin saa käyttöön myös kollegan koneella.</p>
           <p class="case-line"><span class="case-tag case-tag--hyoty">Hyöty</span> Nopeuttaa suunnittelijan arkea ja pitää piirrosjäljen yhtenäisenä tekijästä riippumatta.</p>
           <p class="case-line"><span class="case-tag case-tag--role">Rooli</span> Suunnittelin komennot suunnittelijan näkökulmasta, toteutin ne LISPillä ja paketoin asennettaviksi.</p>
           <div class="tech-chips">
@@ -371,7 +373,7 @@
       <div class="case-grid">
         <div class="case-block">
           <h4>Lähtötilanne</h4>
-          <p>CAD-aineiston vienti tietomallitarkasteluun on helposti manuaalista työtä. Tasot ja ominaisuudet käydään läpi ja mäpätään käsin joka kierroksella — hidasta ja altista pienille virheille.</p>
+          <p>CAD-aineiston vienti tietomallitarkasteluun on helposti manuaalista työtä. Tasot ja ominaisuudet käydään läpi ja mäpätään käsin joka kierroksella; hidasta ja altista pienille virheille.</p>
         </div>
         <div class="case-block">
           <h4>Ratkaisu</h4>
@@ -415,7 +417,7 @@
         </div>
         <div class="case-block">
           <h4>Ratkaisu</h4>
-          <p>Tein sarjan LISP-komentoja, jotka hoitavat toistuvat piirto- ja muokkausvaiheet valmiiksi. Komennot on koottu omaan ribbon-välilehteen, joten niitä ei tarvitse muistaa ulkoa. Asennus on tehty yhden ajon helpoksi, niin että paketin saa käyttöön myös kollegan koneella — sekä AutoCADissa että BricsCADissa.</p>
+          <p>Tein sarjan LISP-komentoja, jotka hoitavat toistuvat piirto- ja muokkausvaiheet valmiiksi. Komennot on koottu omaan ribbon-välilehteen, joten niitä ei tarvitse muistaa ulkoa. Asennus on tehty yhden ajon helpoksi, niin että paketin saa käyttöön myös kollegan koneella, sekä AutoCADissa että BricsCADissa.</p>
         </div>
         <div class="case-block">
           <h4>Hyöty</h4>
@@ -570,7 +572,7 @@
         Etsin teknisen suunnittelun harjoittelu- tai junior-paikkaa, jossa
         pääsen yhdistämään CAD/BIM-työtä, tietomallien tarkastelua ja
         suunnittelutyön automatisointia. Jos profiilini vaikuttaa
-        sopivalta, vastaan mielelläni viestiin. CV löytyy alta PDF:nä.
+        sopivalta, vastaan mielelläni viestiin.
       </p>
       <ul class="contact-list">
         <li>
