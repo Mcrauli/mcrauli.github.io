@@ -59,6 +59,28 @@ a { color: var(--magenta); text-decoration: none; }
 
 ::selection { background: var(--magenta); color: var(--bg); }
 
+/* ---------- Skip link ---------- */
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  z-index: 9999;
+  padding: 8px 16px;
+  background: var(--magenta);
+  color: var(--bg);
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  border-radius: 4px;
+}
+.skip-link:focus {
+  top: 8px;
+}
+
 /* ---------- Top navigation ---------- */
 
 .topnav {
