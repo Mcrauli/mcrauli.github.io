@@ -88,11 +88,16 @@
       return { id, link, el: document.getElementById(id) };
     }).filter(s => s.el);
 
+    const mobileSectionLabel = document.querySelector('.mobile-section');
     const setActive = (id) => {
       navLinks.forEach(a => {
         const aId = a.getAttribute('href').slice(1);
-        if (aId === id) a.classList.add('active');
-        else a.classList.remove('active');
+        if (aId === id) {
+          a.classList.add('active');
+          if (mobileSectionLabel) mobileSectionLabel.textContent = a.textContent;
+        } else {
+          a.classList.remove('active');
+        }
       });
     };
 
@@ -104,6 +109,10 @@
 
     sections.forEach(s => navIO.observe(s.el));
   }
+
+  /* ----- Dynamic footer year ----- */
+  const yearEl = document.querySelector('.footer-year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 
   /* ----- Hamburger mobile nav ----- */
   const hamburger = document.querySelector('.nav-hamburger');

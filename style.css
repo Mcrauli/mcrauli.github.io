@@ -285,9 +285,25 @@ a { color: var(--magenta); text-decoration: none; }
   font-size: 11px;
 }
 
+.mobile-section {
+  display: none;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--cyan);
+  opacity: 0.75;
+  flex: 1;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
 @media (max-width: 540px) {
   .topnav-links { display: none; }
   .nav-hamburger { display: flex; }
+  .mobile-section { display: block; }
 }
 
 @media (prefers-reduced-motion: reduce) {
