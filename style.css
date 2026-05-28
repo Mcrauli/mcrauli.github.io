@@ -189,12 +189,15 @@ a { color: var(--magenta); text-decoration: none; }
   50% { opacity: 0.4; }
 }
 
+@media (max-width: 960px) {
+  .brand-text { display: none; }
+  .availability { display: none; }
+}
+
 @media (max-width: 720px) {
   .topnav { gap: 16px; padding: 0 16px; }
-  .brand-text { display: none; }
   .topnav-links { gap: 16px; }
-  .nav-cta { display: none; }
-  .availability { display: none; }
+  .topnav-right { display: none; }
 }
 
 /* ---------- Corner crosshairs ---------- */
