@@ -34,13 +34,17 @@
   const revealTargets = document.querySelectorAll('.reveal');
   if (revealTargets.length && 'IntersectionObserver' in window) {
     if (prefersReducedMotion) {
-      revealTargets.forEach(el => el.classList.add('revealed'));
+      revealTargets.forEach(el => el.classList.add('reveal-done'));
     } else {
       const io = new IntersectionObserver(entries => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             entry.target.classList.add('revealed');
             io.unobserve(entry.target);
+            // Replace animation class with static class so hover transitions work normally
+            setTimeout(() => {
+              entry.target.classList.replace('revealed', 'reveal-done');
+            }, 850);
           }
         });
       }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });

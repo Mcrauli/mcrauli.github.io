@@ -59,6 +59,12 @@ a { color: var(--magenta); text-decoration: none; }
 
 ::selection { background: var(--magenta); color: var(--bg); }
 
+:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
 /* ---------- Skip link ---------- */
 
 .skip-link {
@@ -385,13 +391,27 @@ a { color: var(--magenta); text-decoration: none; }
 
 /* ---------- Scroll reveal ---------- */
 
-.reveal {
-  opacity: 0;
-  transform: translateY(18px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+.reveal { opacity: 0; transform: translateY(16px); }
+
+.reveal.revealed {
+  animation: reveal-in 0.55s cubic-bezier(0.16, 1, 0.3, 1) var(--reveal-delay, 0ms) both;
 }
 
-.reveal.revealed { opacity: 1; transform: translateY(0); }
+.reveal.reveal-done { opacity: 1; transform: none; }
+
+@keyframes reveal-in {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Stagger successive cards in each grid */
+.value-grid    > :nth-child(2),
+.projects-grid > :nth-child(2),
+.about-grid    > :nth-child(2) { --reveal-delay: 80ms; }
+
+.value-grid    > :nth-child(3),
+.projects-grid > :nth-child(3),
+.about-grid    > :nth-child(3) { --reveal-delay: 160ms; }
 
 /* ---------- Toast ---------- */
 
@@ -695,10 +715,10 @@ a { color: var(--magenta); text-decoration: none; }
   border: 1px solid var(--border-dim);
   border-radius: 6px;
   position: relative;
-  transition: border-color 0.25s ease;
+  transition: border-color 0.25s ease, transform 0.25s ease;
 }
 
-.about-block:hover { border-color: var(--magenta-dim); }
+.about-block:hover { border-color: var(--magenta-dim); transform: translateY(-2px); }
 
 .about-block h3 {
   font-family: 'JetBrains Mono', ui-monospace, monospace;
@@ -1368,8 +1388,14 @@ a { color: var(--magenta); text-decoration: none; }
     animation: none !important;
     transition: none !important;
   }
+  .reveal, .reveal.revealed, .reveal.reveal-done {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
   .project-card:hover,
   .btn:hover,
+  .about-block:hover,
   .project-links a:hover { transform: none !important; }
   .hero h1::before, .hero h1::after { display: none; }
   .availability-dot { animation: none; }
