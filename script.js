@@ -129,6 +129,7 @@
     mobileNav.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
     window.addEventListener('resize', () => { if (window.innerWidth > 540) closeMenu(); }, { passive: true });
     window.addEventListener('scroll', closeMenu, { passive: true });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
   }
 
   /* ----- Email copy-to-clipboard ----- */
