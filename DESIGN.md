@@ -61,7 +61,7 @@ rgba(bg-card) fill, 1px border-dim, 6–8px radius. Hover: border animates to ma
 Same card base. Gradient border overlay on hover (magenta-dim → transparent → cyan-dim via pseudo-element mask). 16:9 thumbnail area with inline SVG illustrations.
 
 ### Case studies
-Full-border article blocks. ⚠ Currently uses border-left: 3px magenta (violates side-stripe-border ban in shared design laws). A future pass should replace with full border + background tint.
+Full-border article blocks. `border: 1px solid var(--magenta-dim)` with `var(--bg-card)` fill. No side-stripe.
 
 ### Chips
 Mono font, 10–13px, 2–3px radius. Primary: magenta-bg + magenta border-dim. Support: transparent + border-dim (hover cyan). Tech: cyan-bg + cyan-dim border.
@@ -82,6 +82,8 @@ Mono uppercase, magenta-dim left border, blur backdrop. Slide-up + scale-up ente
 
 ## Breakpoints
 
-- ≤720px: topnav loses brand text and availability indicator
+- ≤960px: topnav hides brand-text and availability indicator
+- ≤720px: topnav-right (OTA YHTEYTTÄ + availability) hidden
+- ≤540px: topnav-links hidden, hamburger button shown; dropdown panel contains all 5 links + CTA
 - ≤780px: flow steps reflow to vertical column
 - ≤600px: contact list unstacks, crosshairs hidden, case study padding reduced

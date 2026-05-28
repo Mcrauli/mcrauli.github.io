@@ -26,7 +26,7 @@
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=13">
+<link rel="stylesheet" href="style.css?v=14">
 
 <script type="application/ld+json">
 {
@@ -83,7 +83,21 @@
       avoinna · etsii harjoittelu- tai junior-paikkaa
     </span>
   </div>
+  <button class="nav-hamburger" aria-label="Avaa navigaatio" aria-expanded="false" aria-controls="mobile-nav">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 </nav>
+
+<div class="mobile-nav" id="mobile-nav" role="navigation" aria-label="Mobiilinavigaatio" aria-hidden="true">
+  <a href="#vahvuudet">/vahvuudet</a>
+  <a href="#tyot">/työt</a>
+  <a href="#tausta">/tausta</a>
+  <a href="#osaaminen">/osaaminen</a>
+  <a href="#yhteys">/yhteys</a>
+  <a class="nav-cta" href="#yhteys">Ota yhteyttä</a>
+</div>
 
 <div class="scroll-progress"><div class="scroll-progress__fill"></div></div>
 
@@ -556,7 +570,7 @@
         Etsin teknisen suunnittelun harjoittelu- tai junior-paikkaa, jossa
         pääsen yhdistämään CAD/BIM-työtä, tietomallien tarkastelua ja
         suunnittelutyön automatisointia. Jos profiilini vaikuttaa
-        sopivalta, vastaan mielelläni viestiin — CV löytyy alta PDF:nä.
+        sopivalta, vastaan mielelläni viestiin. CV löytyy alta PDF:nä.
       </p>
       <ul class="contact-list">
         <li>
@@ -594,6 +608,6 @@
   © 2026 Lauri Rekola · Portfolio built with <span class="accent">HTML/CSS/JS</span>
 </footer>
 
-<script src="script.js?v=2"></script>
+<script src="script.js?v=3"></script>
 </body>
 </html>

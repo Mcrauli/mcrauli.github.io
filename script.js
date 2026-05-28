@@ -105,6 +105,27 @@
     sections.forEach(s => navIO.observe(s.el));
   }
 
+  /* ----- Hamburger mobile nav ----- */
+  const hamburger = document.querySelector('.nav-hamburger');
+  const mobileNav = document.getElementById('mobile-nav');
+  if (hamburger && mobileNav) {
+    const openMenu = () => {
+      mobileNav.classList.add('open');
+      hamburger.setAttribute('aria-expanded', 'true');
+      mobileNav.setAttribute('aria-hidden', 'false');
+    };
+    const closeMenu = () => {
+      mobileNav.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      mobileNav.setAttribute('aria-hidden', 'true');
+    };
+    hamburger.addEventListener('click', () => {
+      mobileNav.classList.contains('open') ? closeMenu() : openMenu();
+    });
+    mobileNav.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+    window.addEventListener('resize', () => { if (window.innerWidth > 540) closeMenu(); }, { passive: true });
+  }
+
   /* ----- Email copy-to-clipboard ----- */
   document.querySelectorAll('[data-copy]').forEach(btn => {
     btn.addEventListener('click', async () => {
