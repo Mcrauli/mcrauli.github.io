@@ -80,9 +80,9 @@
     });
   });
 
-  /* ----- Active topnav link via IntersectionObserver ----- */
+  /* ----- Active topnav link via scroll position ----- */
   const navLinks = document.querySelectorAll('.topnav-links a[href^="#"]');
-  if (navLinks.length && 'IntersectionObserver' in window) {
+  if (navLinks.length) {
     const sections = Array.from(navLinks).map(link => {
       const id = link.getAttribute('href').slice(1);
       return { id, link, el: document.getElementById(id) };
@@ -101,23 +101,23 @@
       });
     };
 
-    const navIO = new IntersectionObserver(entries => {
-      const visible = entries.filter(e => e.isIntersecting)
-        .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
-      if (visible.length) setActive(visible[0].target.id);
-    }, { rootMargin: '-30% 0px -55% 0px', threshold: [0, 0.25, 0.5] });
+    const updateActive = () => {
+      // At page bottom: always activate last section
+      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) {
+        setActive(sections[sections.length - 1].id);
+        return;
+      }
+      // Activate the last section whose top edge is above 35% of viewport height
+      const threshold = window.innerHeight * 0.35;
+      let current = sections[0];
+      for (const s of sections) {
+        if (s.el.getBoundingClientRect().top <= threshold) current = s;
+      }
+      setActive(current.id);
+    };
 
-    sections.forEach(s => navIO.observe(s.el));
-
-    // Force-activate last section when scrolled to page bottom
-    const lastSection = sections[sections.length - 1];
-    if (lastSection) {
-      window.addEventListener('scroll', () => {
-        if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) {
-          setActive(lastSection.id);
-        }
-      }, { passive: true });
-    }
+    window.addEventListener('scroll', updateActive, { passive: true });
+    updateActive();
   }
 
   /* ----- Dynamic footer year ----- */
