@@ -27,8 +27,8 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=19">
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700;800&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=20">
 
 <script type="application/ld+json">
 {
@@ -129,11 +129,10 @@
        VAHVUUDET — mitä tuon työnantajalle
        ============================================================ -->
   <section class="section" id="vahvuudet">
-    <div class="section-kicker">value</div>
     <h2>Mitä tuon <span class="accent">mukanani</span></h2>
     <div class="value-grid">
       <div class="value-card reveal">
-        <span class="value-num">01</span>
+        <span class="value-num">&gt;</span>
         <h3>Ymmärrän sekä suunnittelun että koodin</h3>
         <p>
           Olen nähnyt työharjoittelussa, miltä suunnittelijan arki
@@ -144,7 +143,7 @@
         </p>
       </div>
       <div class="value-card reveal">
-        <span class="value-num">02</span>
+        <span class="value-num">&gt;</span>
         <h3>Automatisoin toistuvan käsityön</h3>
         <p>
           Toistuvat manuaaliset vaiheet piirtämisessä ja tietomallin
@@ -154,7 +153,7 @@
         </p>
       </div>
       <div class="value-card reveal">
-        <span class="value-num">03</span>
+        <span class="value-num">&gt;</span>
         <h3>Opin nopeasti ja vien työt loppuun</h3>
         <p>
           Python, AutoCAD LISP, IFC ja web-tekniikat olen opetellut
@@ -170,7 +169,6 @@
        TYÖT
        ============================================================ -->
   <section class="section" id="tyot">
-    <div class="section-kicker">projects</div>
     <h2>Mitä olen <span class="accent">tehnyt</span></h2>
     <div class="projects-grid">
 
@@ -217,9 +215,7 @@
           </div>
           <h3>DXF/DWG → IFC -konvertteri</h3>
           <p class="case-line"><span class="case-tag">Ongelma</span> CAD-aineiston vienti tietomalliksi on hidasta käsityötä: tasot ja ominaisuudet mapataan erikseen joka kerta.</p>
-          <p class="case-line"><span class="case-tag">Ratkaisu</span> Python-työkalu, joka lukee DXF/DWG-piirustuksen ja muodostaa siitä IFC4-koordinaatiomallin. Mappaus rakentuu CAD-tasojen pohjalle, ja elementeille viedään property set -tyyppistä tietoa. Lopputulos avautuu tarkastettavaksi esimerkiksi Solibrissa.</p>
           <p class="case-line"><span class="case-tag case-tag--hyoty">Hyöty</span> Vähentää manuaalista CAD → BIM -työtä ja tekee aineiston siirrosta toistettavaa, tukena tietomallikoordinoinnissa.</p>
-          <p class="case-line"><span class="case-tag case-tag--role">Rooli</span> Idea, toteutus ja käyttöliittymä: Python ja IfcOpenShell, oma GUI.</p>
           <div class="tech-chips">
             <span class="chip">Python</span>
             <span class="chip">IfcOpenShell</span>
@@ -274,9 +270,7 @@
           </div>
           <h3>AutoCAD-piirtotyökalut</h3>
           <p class="case-line"><span class="case-tag">Ongelma</span> Samat piirtovaiheet toistuvat työssä usein: komponentit, tasot ja merkinnät asetetaan käsin joka kerta.</p>
-          <p class="case-line"><span class="case-tag">Ratkaisu</span> Työkalupaketti, jossa toistuvat piirto- ja muokkausvaiheet hoituvat valmiilla komennoilla. Komennot löytyvät omasta ribbon-välilehdestä, ja asennus on tehty helpoksi: paketin saa käyttöön myös kollegan koneella.</p>
           <p class="case-line"><span class="case-tag case-tag--hyoty">Hyöty</span> Nopeuttaa suunnittelijan arkea ja pitää piirrosjäljen yhtenäisenä tekijästä riippumatta.</p>
-          <p class="case-line"><span class="case-tag case-tag--role">Rooli</span> Suunnittelin komennot suunnittelijan näkökulmasta, toteutin ne LISPillä ja paketoin asennettaviksi.</p>
           <div class="tech-chips">
             <span class="chip">AutoCAD LISP</span>
             <span class="chip">CAD-automaatio</span>
@@ -348,9 +342,7 @@
           </div>
           <h3>Työkalujen esittelysivusto</h3>
           <p class="case-line"><span class="case-tag">Ongelma</span> Hyvätkin työkalut jäävät käyttämättä, jos kukaan ei tiedä miten ne toimivat.</p>
-          <p class="case-line"><span class="case-tag">Ratkaisu</span> Kevyt web-pohjainen tuki- ja dokumentaatiosivusto: työkalujen käyttöohjeet, käyttöönotto ja esittelyt samassa paikassa. Selkeä käyttöliittymä, animoidut esimerkit ja mobiilikäyttö. Tehty ilman frameworkia, joten ylläpito on nopeaa. Myös tämä portfolio on rakennettu samalla tekniikalla.</p>
           <p class="case-line"><span class="case-tag case-tag--hyoty">Hyöty</span> Madaltaa kynnystä ottaa työkalut käyttöön ja tukee suunnittelutyötä arjessa.</p>
-          <p class="case-line"><span class="case-tag case-tag--role">Rooli</span> Suunnittelu, ulkoasu, sisältö ja toteutus alusta loppuun.</p>
           <div class="tech-chips">
             <span class="chip">HTML / CSS / JS</span>
             <span class="chip">Responsiivinen</span>
@@ -371,7 +363,6 @@
        CASET — työnkulut tarkemmin
        ============================================================ -->
   <section class="section" id="caset">
-    <div class="section-kicker">case studies</div>
     <h2>Näin ne <span class="accent">toimivat</span></h2>
     <p class="section-lead">
       Kolme työnkulkua yleisellä tasolla: lähtötilanne, toteutus ja lopputulos; sisäinen koodi ja yrityskohtaiset tiedot jäävät ulkopuolelle.
@@ -500,7 +491,6 @@
        TAUSTA
        ============================================================ -->
   <section class="section" id="tausta">
-    <div class="section-kicker">about</div>
     <h2>Kuka <span class="accent">olen</span></h2>
     <div class="about-grid">
       <div class="about-block reveal">
@@ -539,7 +529,6 @@
        OSAAMINEN — pää- ja tukiosaaminen
        ============================================================ -->
   <section class="section" id="osaaminen">
-    <div class="section-kicker">skills</div>
     <h2>Mitä <span class="accent">osaan</span></h2>
 
     <div class="skill-tier reveal">
@@ -579,15 +568,13 @@
        YHTEYS
        ============================================================ -->
   <section class="section" id="yhteys">
-    <div class="section-kicker">contact</div>
     <h2>Ollaan <span class="accent">yhteydessä</span></h2>
     <div class="contact-card reveal">
       <p class="contact-intro">
         Etsin teknisen suunnittelun harjoittelu- tai junior-paikkaa, jossa
         pääsen yhdistämään CAD/BIM-työtä, tietomallien tarkastelua ja
         suunnittelutyön automatisointia. Jos profiilini vaikuttaa
-        sopivalta, vastaan mielelläni viestiin. LinkedIn-profiili on
-        valmisteilla.
+        sopivalta, vastaan mielelläni viestiin.
       </p>
       <ul class="contact-list">
         <li>
@@ -596,6 +583,10 @@
             <a href="mailto:laurirekola@icloud.com">laurirekola@icloud.com</a>
             <button class="copy-btn" type="button" data-copy="laurirekola@icloud.com" aria-label="Kopioi sähköposti">kopioi</button>
           </span>
+        </li>
+        <li>
+          <span class="contact-label">github</span>
+          <span class="contact-value"><a href="https://github.com/Mcrauli" target="_blank" rel="noopener noreferrer">github.com/Mcrauli</a></span>
         </li>
         <li>
           <span class="contact-label">status</span>

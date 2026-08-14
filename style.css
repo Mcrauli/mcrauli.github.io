@@ -34,8 +34,8 @@ html { background-color: var(--bg); }
 
 body {
   margin: 0;
-  font-family: 'Inter', sans-serif;
-  font-feature-settings: "cv11", "ss01", "ss03";
+  font-family: 'Work Sans', sans-serif;
+  font-feature-settings: "kern", "liga";
   color: var(--text);
   min-height: 100vh;
   background:
@@ -483,7 +483,7 @@ a { color: var(--magenta); text-decoration: none; }
 .hero-kicker::after  { content: " ]"; color: var(--text-faint); }
 
 .hero h1 {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-size: clamp(48px, 9vw, 96px);
   font-weight: 700;
   letter-spacing: -0.03em;
@@ -537,7 +537,7 @@ a { color: var(--magenta); text-decoration: none; }
 }
 
 .hero-pitch {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-size: clamp(21px, 2.5vw, 27px);
   font-weight: 600;
   line-height: 1.4;
@@ -622,7 +622,7 @@ a { color: var(--magenta); text-decoration: none; }
 }
 
 .section h2 {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-size: clamp(32px, 5vw, 48px);
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -677,7 +677,7 @@ a { color: var(--magenta); text-decoration: none; }
 }
 
 .value-card h3 {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-size: 17px;
   font-weight: 600;
   color: var(--text);
@@ -874,7 +874,7 @@ a { color: var(--magenta); text-decoration: none; }
 }
 
 .project-card h3 {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-size: 22px;
   font-weight: 700;
   letter-spacing: -0.01em;
@@ -1000,7 +1000,7 @@ a { color: var(--magenta); text-decoration: none; }
 .case-index::before { content: "// "; color: var(--text-faint); }
 
 .case-study h3 {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-size: 24px;
   font-weight: 700;
   letter-spacing: -0.01em;
@@ -1178,7 +1178,7 @@ a { color: var(--magenta); text-decoration: none; }
 }
 
 .skill-tier-head h3 {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-size: 18px;
   font-weight: 600;
   color: var(--text);
