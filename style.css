@@ -22,7 +22,7 @@
 
   --text:         #e8e6ff;
   --text-dim:     #8b8aa8;
-  --text-faint:   #5e5d78;
+  --text-faint:   #7a7994;
 
   --border:       rgba(255, 42, 109, 0.18);
   --border-dim:   rgba(232, 230, 255, 0.06);
@@ -472,7 +472,7 @@ a { color: var(--magenta); text-decoration: none; }
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--cyan);
-  margin-bottom: 28px;
+  margin: 10px auto 26px;
   padding: 6px 12px;
   border: 1px solid var(--cyan-dim);
   background: var(--cyan-bg);
@@ -746,7 +746,7 @@ a { color: var(--magenta); text-decoration: none; }
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
   gap: 22px;
 }
 
@@ -756,7 +756,7 @@ a { color: var(--magenta); text-decoration: none; }
   background: var(--bg-card);
   border: 1px solid var(--border-dim);
   border-radius: 8px;
-  overflow: hidden;
+  overflow: visible;
   transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
   position: relative;
 }
@@ -794,6 +794,7 @@ a { color: var(--magenta); text-decoration: none; }
     ),
     #100416;
   border-bottom: 1px solid var(--border-dim);
+  border-radius: 8px 8px 0 0;
   position: relative;
   overflow: hidden;
 }
@@ -1328,7 +1329,8 @@ a { color: var(--magenta); text-decoration: none; }
 
 .copy-btn {
   margin-left: 10px;
-  padding: 3px 10px;
+  padding: 6px 10px;
+  min-height: 28px;
   font-family: 'JetBrains Mono', ui-monospace, monospace;
   font-size: 10px;
   font-weight: 600;
@@ -1384,19 +1386,20 @@ a { color: var(--magenta); text-decoration: none; }
 /* ---------- Reduced motion ---------- */
 
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation: none !important;
-    transition: none !important;
-  }
+  .hero h1::before, .hero h1::after { display: none; }
+  .availability-dot { animation: none; opacity: 1; }
   .reveal, .reveal.revealed, .reveal.reveal-done {
     opacity: 1 !important;
     transform: none !important;
     animation: none !important;
   }
+  .mobile-nav.open { animation: none !important; }
+  .nav-hamburger span { transition: none !important; }
+  .scroll-progress__fill { transition: none; }
   .project-card:hover,
+  .value-card:hover,
   .btn:hover,
   .about-block:hover,
-  .project-links a:hover { transform: none !important; }
-  .hero h1::before, .hero h1::after { display: none; }
-  .availability-dot { animation: none; }
+  .project-links a:hover,
+  .case-ask:hover { transform: none !important; }
 }

@@ -27,8 +27,8 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700;800&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=20">
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=21">
 
 <script type="application/ld+json">
 {
@@ -66,7 +66,7 @@
 </head>
 <body>
 
-<a href="#top" class="skip-link">Siirry pääsisältöön</a>
+<a href="#main-content" class="skip-link">Siirry pääsisältöön</a>
 <nav class="topnav" aria-label="Päänavigaatio">
   <a class="brand" href="#top">
     <span class="brand-bracket">&lt;</span><span class="brand-icon">LR</span><span class="brand-bracket">/&gt;</span>
@@ -82,7 +82,7 @@
   <div class="topnav-right">
     <a class="nav-cta" href="#yhteys">Ota yhteyttä</a>
     <span class="availability">
-      <span class="availability-dot"></span>
+      <span class="availability-dot" aria-hidden="true"></span>
       avoinna · etsii harjoittelu- tai junior-paikkaa
     </span>
   </div>
@@ -110,11 +110,11 @@
 
 <div class="toast-host" aria-live="polite" aria-atomic="true"></div>
 
-<div class="container">
+<main class="container" id="main-content">
 
   <header class="hero" id="top">
+    <h1 data-text="Lauri Rekola" aria-label="Lauri Rekola">Lauri Rekola</h1>
     <div class="hero-kicker">Tekninen suunnittelu × CAD/BIM-automaatio</div>
-    <h1 data-text="Lauri Rekola">Lauri Rekola</h1>
     <p class="hero-pitch">
       Rakennan työkaluja, jotka muuttavat toistuvan
       <span class="accent">CAD/BIM-käsityön</span> selkeäksi työnkuluksi.
@@ -135,31 +135,27 @@
         <span class="value-num">&gt;</span>
         <h3>Ymmärrän sekä suunnittelun että koodin</h3>
         <p>
-          Olen nähnyt työharjoittelussa, miltä suunnittelijan arki
-          käytännössä näyttää. Ohjelmointitaidon avulla pystyn
-          kehittämään käytännönläheisiä työkaluja toistuvien vaiheiden
-          helpottamiseen. Kun ymmärtää molempia puolia, automaatiosta
-          tulee aidosti käyttökelpoista.
+          Teknisen suunnittelijan arki on tuttua käytännöstä.
+          Kun ymmärtää molempia puolia — suunnittelun logiikan ja koodin —
+          automaatiosta tulee aidosti käyttökelpoista, ei vain teknisesti mahdollista.
         </p>
       </div>
       <div class="value-card reveal">
         <span class="value-num">&gt;</span>
         <h3>Automatisoin toistuvan käsityön</h3>
         <p>
-          Toistuvat manuaaliset vaiheet piirtämisessä ja tietomallin
-          teossa vievät aikaa ja lisäävät virheiden mahdollisuutta. Olen
-          kehittänyt työkaluja, jotka tekevät rutiinivaiheista nopeampia
-          ja pitävät lopputuloksen yhtenäisenä.
+          Olen rakentanut Python-skriptejä ja LISP-komentoja, jotka
+          poistavat toistuvat käsityövaiheet CAD-piirtämisestä ja
+          tietomallintamisesta. Tulos on nopeampi ja yhtenäisempi.
         </p>
       </div>
       <div class="value-card reveal">
         <span class="value-num">&gt;</span>
         <h3>Opin nopeasti ja vien työt loppuun</h3>
         <p>
-          Python, AutoCAD LISP, IFC ja web-tekniikat olen opetellut
-          konkreettisten tarpeiden kautta. Pyrin viemään työkalut
-          käytännön tasolle asti: käyttöliittymä, asennus ja ohjeistus
-          ovat osa kokonaisuutta.
+          Python, AutoCAD LISP, IFC ja web olen oppinut rakentamalla
+          todellisia tarpeita varten. Käyttöliittymä, asennus ja ohjeistus
+          kuuluvat kokonaisuuteen — en jätä työtä puolivalmiiksi.
         </p>
       </div>
     </div>
@@ -600,12 +596,12 @@
     </div>
   </section>
 
-</div>
+</main>
 
 <footer class="site-footer">
   © <span class="footer-year">2026</span> Lauri Rekola · Portfolio built with <span class="accent">HTML/CSS/JS</span>
 </footer>
 
-<script src="script.js?v=9"></script>
+<script defer src="script.js?v=9"></script>
 </body>
 </html>
