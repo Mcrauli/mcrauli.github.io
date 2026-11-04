@@ -8,6 +8,155 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../style.css?v=21">
+<style>
+  .project-hero {
+    max-width: 720px;
+    margin-bottom: 3rem;
+  }
+  .project-hero h1 {
+    font-family: 'Exo 2', sans-serif;
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0.75rem 0 1rem;
+    text-wrap: balance;
+  }
+  .project-hero .lede {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--text-dim);
+    max-width: 620px;
+  }
+  .project-section {
+    max-width: 720px;
+    margin-bottom: 2.5rem;
+  }
+  .project-section h2 {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--cyan);
+    margin: 0 0 0.75rem;
+  }
+  .project-section p {
+    color: var(--text-dim);
+    line-height: 1.7;
+    margin: 0 0 0.75rem;
+  }
+  .pipeline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    align-items: center;
+    margin: 1rem 0;
+  }
+  .pipeline-step {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 4px;
+    padding: 0.3rem 0.7rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--text-dim);
+    white-space: nowrap;
+  }
+  .pipeline-step.highlight {
+    border-color: rgba(0,230,230,0.3);
+    color: var(--cyan);
+  }
+  .pipeline-arrow {
+    color: rgba(255,255,255,0.2);
+    font-size: 0.85rem;
+  }
+  .stat-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+  .stat-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 6px;
+    padding: 1rem;
+  }
+  .stat-card .stat-value {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--magenta);
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+  .stat-card .stat-label {
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    line-height: 1.4;
+  }
+  .output-list {
+    list-style: none;
+    padding: 0;
+    margin: 0.75rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .output-list li {
+    display: flex;
+    gap: 0.75rem;
+    align-items: baseline;
+    color: var(--text-dim);
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  .output-list li::before {
+    content: "→";
+    color: var(--cyan);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+  }
+  .tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.75rem;
+  }
+  .tag {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 4px;
+    padding: 0.2rem 0.6rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--text-dim);
+  }
+  .back-link {
+    color: var(--cyan);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1rem;
+  }
+  .back-link:hover {
+    color: var(--magenta);
+  }
+  .status-note {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255,170,0,0.08);
+    border: 1px solid rgba(255,170,0,0.2);
+    border-radius: 6px;
+    padding: 0.5rem 0.8rem;
+    font-size: 0.85rem;
+    color: var(--amber);
+    margin-top: 0.5rem;
+  }
+</style>
 </head>
 <body>
 
@@ -22,18 +171,110 @@
   </div>
 </nav>
 
-<main class="container" id="main-content" style="padding-top: 100px;">
-  <section class="section">
-    <div class="project-meta" style="margin-bottom: 1rem;">
+<main class="container" id="main-content" style="padding-top: 100px; padding-bottom: 4rem;">
+
+  <div class="project-hero">
+    <div class="project-meta" style="margin-bottom: 0.75rem;">
       <span class="status-badge">SCAN-TO-BIM · IFC4</span>
       <span class="year-badge">2025 →</span>
     </div>
-    <h2>Ordinate — <span class="accent">Scan-to-BIM / IFC4</span></h2>
+    <h1>Ordinate — <span class="accent">laserkeilaus IFC4:ksi</span></h1>
+    <p class="lede">
+      Rakensin Ordinaten koska inventointimallien tekeminen käsin on hidasta. Kun kohteessa on jo laserkeilaus, pitäisi sen perusteella saada pohja nopeasti — ei piirtää seiniä yksitellen. Ordinate lukee pistepilven ja kirjoittaa ulos älykkään IFC4-tiedoston, jonka saa suoraan auki Revitissä tai Solibrissa.
+    </p>
+  </div>
 
-    <p style="max-width: 640px; color: var(--text-dim); font-size: 0.95rem;">Tarkempi kuvaus tulossa.</p>
+  <div class="project-section">
+    <h2>Mitä se tekee</h2>
+    <p>Syötteenä pistepilvi (E57, LAS, LAZ, PLY tai PTS), ulos IFC4 ja DXF. Ohjelma tunnistaa sisätilasta rakenteet ja suodattaa kalusteet ja tavarat pois ennen kuin mallintaa mitään.</p>
 
-    <a href="../index.html#tyot" style="color: var(--cyan); font-family: 'JetBrains Mono', monospace; font-size: 0.85rem;">← Takaisin töihin</a>
-  </section>
+    <ul class="output-list">
+      <li>Seinät paksuuksineen ja materiaaleineen, nimettyinä (VS / KVS / US + paksuus)</li>
+      <li>Lattia ja katto oikeilla IFC-tyypeillä</li>
+      <li>Ovet ja ikkunat seiniin kiinnitettyinä</li>
+      <li>Pilarit ja palkit</li>
+      <li>Huonetilat pinta-aloineen</li>
+      <li>Georeferointi: malli skannin oikeissa koordinaateissa, avautuu pistepilven päälle täsmälleen</li>
+    </ul>
+
+    <p>Jokainen elementti tulee Revit/ArchiCAD-yhteensopivana: tyypit, materiaalit, property setit ja määrät ovat valmiina, ei pelkkää geometriaa.</p>
+  </div>
+
+  <div class="project-section">
+    <h2>Miten se toimii</h2>
+    <p>Putki menee karkeasti näin:</p>
+
+    <div class="pipeline">
+      <span class="pipeline-step highlight">pistepilvi</span>
+      <span class="pipeline-arrow">→</span>
+      <span class="pipeline-step">lataus + yksikkömuunnos</span>
+      <span class="pipeline-arrow">→</span>
+      <span class="pipeline-step">harvennus + kohinasuodatus</span>
+      <span class="pipeline-arrow">→</span>
+      <span class="pipeline-step">kalustesuodatus</span>
+      <span class="pipeline-arrow">→</span>
+      <span class="pipeline-step">seinädetektio</span>
+      <span class="pipeline-arrow">→</span>
+      <span class="pipeline-step">paksuusmittaus</span>
+      <span class="pipeline-arrow">→</span>
+      <span class="pipeline-step">tilat + aukot</span>
+      <span class="pipeline-arrow">→</span>
+      <span class="pipeline-step highlight">IFC4 + DXF</span>
+    </div>
+
+    <p>Seinädetektio perustuu 2D-tiheysmaskiin: pilvi leikataan vyötärökorkeudelta, rakennetaan rasteri ja etsitään ääriviivat. Tästä saadaan seinäakselit ja paksuudet. Paksuus lukitaan lopussa raakapilvestä mitattuun arvoon ja snäpätään lähimpään rakennusstandardiin (66/92/120/150/200/250/300 mm), mutta mitattu arvo tallentuu IFC-propertyyn.</p>
+
+    <p>Monta keilausta samasta kerroksesta voi ajaa yhdistettynä — ohjelma hoitaa rekisteröinnin ja tuottaa yhden mallin.</p>
+  </div>
+
+  <div class="project-section">
+    <h2>Tarkkuuslukuja</h2>
+    <p>Tarkkuus mitattu pyöreällä (round-trip) validoinnilla sekä avoimella Rohbau3D-aineistolla (93 keilausta, 6 rakennustyömaata).</p>
+
+    <div class="stat-row">
+      <div class="stat-card">
+        <span class="stat-value">0.0 mm</span>
+        <span class="stat-label">Seinän paksuusvirhe puhtaalla datalla — algoritmin teoreettinen raja</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-value">~0.7 mm</span>
+        <span class="stat-label">Paksuusvirhe kalustetussa oikeassa skannauksessa</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-value">71 %</span>
+        <span class="stat-label">GT-seinäinstansseista löytyy (Rohbau3D, 93 sceneä)</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-value">86 %</span>
+        <span class="stat-label">Löydetyistä seinistä aitoja (tarkkuus)</span>
+      </div>
+    </div>
+
+    <p>Nurkkasijaintitarkkuus heikkenee oikealla datalla (~100 mm) verrattuna puhtaaseen dataan (~4 mm). Syy on yksipuolinen keilaus: seinien toinen pinta jää usein näkemättä, ja kalusteet peittävät nurkat. Ei algoritmin vika vaan datan fyysinen raja.</p>
+  </div>
+
+  <div class="project-section">
+    <h2>Tekninen stack</h2>
+    <p>Windows-sovellus, GUI ja CLI. Jaellaan Inno Setup -installerina, päivittää itsensä per-user-asennuksella ilman admin-oikeuksia.</p>
+    <div class="tag-row">
+      <span class="tag">Python 3.12</span>
+      <span class="tag">open3d</span>
+      <span class="tag">opencv</span>
+      <span class="tag">ifcopenshell</span>
+      <span class="tag">ezdxf</span>
+      <span class="tag">PySide6</span>
+      <span class="tag">PyInstaller</span>
+    </div>
+  </div>
+
+  <div class="project-section">
+    <h2>Tilanne</h2>
+    <p>Pre-release-vaiheessa, v0.9.37. Perusputki toimii kalustetuilla sisätiloilla. Seuraavaksi: monikerroksiset ja porrastetut tilat, ja aukkokattavuuden parantaminen.</p>
+    <div class="status-note">pre-release · v0.9.37</div>
+  </div>
+
+  <a href="../index.html#tyot" class="back-link">← Takaisin töihin</a>
+
 </main>
 
 </body>
