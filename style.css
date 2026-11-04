@@ -242,8 +242,8 @@ a { color: var(--magenta); text-decoration: none; }
   gap: 5px;
   align-items: center;
   justify-content: center;
-  min-width: 38px;
-  min-height: 38px;
+  min-width: 44px;
+  min-height: 44px;
 }
 
 .nav-hamburger span {

@@ -27,8 +27,8 @@ All current values are hex/rgba; migration to OKLCH is a future improvement.
 
 Three-font system:
 
-- **Space Grotesk** (500–700): Display headings (h1, h2, h3 in cards). Uppercase, tight letter-spacing.
-- **Inter** (400–700): Body prose. Feature settings: cv11, ss01, ss03.
+- **Exo 2** (400–700): Display headings (h1, h2, h3 in cards). Uppercase, tight letter-spacing.
+- **Work Sans** (400–700): Body prose.
 - **JetBrains Mono** (400–700): Navigation, kickers, badges, chips, labels, CTAs, all UI-adjacent text.
 
 Scale: h1 clamp(48px, 9vw, 96px) → h2 clamp(32px, 5vw, 48px) → h3 17–24px → body 14–15px. Ratio ≥1.5 between display and body.
