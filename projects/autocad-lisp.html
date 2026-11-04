@@ -91,13 +91,13 @@
     </div>
     <h1>AutoCAD LISP <span class="accent">-piirtotyökalut</span></h1>
     <p class="lede">
-      CAD-työssä iso osa ajasta menee toistuviin vaiheisiin: oikea taso päälle, oikea symboli oikeaan paikkaan, merkinnät samassa muodossa joka kerta. Kirjoitin LISP-komentoja jotka hoitavat ne yhdellä näppäilylle.
+      CAD-työssä iso osa ajasta menee toistuviin vaiheisiin: oikea taso päälle, oikea symboli oikeaan paikkaan, merkinnät samassa muodossa joka kerta. Kirjoitin LISP-komentoja jotka hoitavat ne yhdellä komennolla.
     </p>
   </div>
 
   <div class="project-section">
     <h2>Mitä työkalut tekevät</h2>
-    <p>Komentosarja toistuviin piirtovaiheisiin. Komento aktivoi oikean tason, lisää komponentin ja sijoittaa sen — kaikki yhdellä komennolla sen sijaan että tekisi jokaisen vaiheen erikseen.</p>
+    <p>Komentosarja toistuviin piirtovaiheisiin. Komento aktivoi tason, lisää komponentin ja sijoittaa sen yhdellä kertaa.</p>
 
     <ul class="output-list">
       <li>Tason aktivointi ja objektin lisäys yhdessä komennossa</li>
@@ -110,8 +110,8 @@
 
   <div class="project-section">
     <h2>Miksi tein tämän</h2>
-    <p>CAD-harjoittelun aikana kävi selväksi että tietyt työvaiheet toistuvat kymmeniä kertoja päivässä. Kun samat klikkaukset tulevat eteen tarpeeksi usein, alkaa miettiä onko se pakko tehdä käsin.</p>
-    <p>LISP oli luonteva valinta, koska se on AutoCADin oma skriptikieli eikä vaadi erillisiä asennuksia. Ribbon-integraatio tuli mukaan koska komennot pitää myös löytää — pelkkä komentorivi ei riitä jos käyttäjiä on muitakin.</p>
+    <p>CAD-harjoittelun aikana tietyt työvaiheet toistuivat kymmeniä kertoja päivässä. Kun samat klikkaukset tulevat eteen tarpeeksi usein, alkaa miettiä onko se pakko tehdä käsin.</p>
+    <p>LISP toimii AutoCADissa suoraan ilman lisäasennuksia. Ribbon tuli mukaan koska komennot pitää myös löytää — pelkkä komentorivi ei riitä jos käyttäjiä on muitakin.</p>
   </div>
 
   <div class="project-section">

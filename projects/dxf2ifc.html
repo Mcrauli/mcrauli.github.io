@@ -110,13 +110,13 @@
     </div>
     <h1>DXF/DWG → <span class="accent">IFC4</span> -konvertteri</h1>
     <p class="lede">
-      CAD-piirustuksista pitää toisinaan saada IFC-malli Solibriin tai muuhun tietomalliohjelmistoon. Ilman automaatiota se tarkoittaa manuaalista tasojen mappausta joka kerta uudelleen, jokaisen piirustuksen kohdalla erikseen. Tein Pythonilla työnkulun joka hoitaa sen automaattisesti.
+      CAD-piirustuksista pitää välillä saada IFC-malli Solibriin tai muuhun tietomalliohjelmistoon. Ilman automaatiota se on manuaalista tasojen mappausta joka kerta uudelleen. Tein Pythonilla työnkulun joka hoitaa sen.
     </p>
   </div>
 
   <div class="project-section">
     <h2>Mitä se tekee</h2>
-    <p>Lukee DXF- tai DWG-tiedoston, tunnistaa tasot ja muuntaa ne IFC4-elementeiksi layer-mappauksen perusteella. Sama mappauslogiikka toimii joka kerralla, joten samanlaiset piirustukset kääntyvät johdonmukaisesti.</p>
+    <p>Lukee DXF- tai DWG-tiedoston, tunnistaa tasot ja muuntaa ne IFC4-elementeiksi layer-mappauksen perusteella. Kun mappaus on tehty kerran, kaikki saman konvention mukaan piirretyt tiedostot kääntyvät samalla logiikalla.</p>
 
     <ul class="output-list">
       <li>DXF/DWG sisään, IFC4 ulos</li>
@@ -143,13 +143,13 @@
       <span class="flow-step hl">IFC4</span>
     </div>
 
-    <p>Mappaus konfiguroidaan etukäteen: mitkä tasonnimet vastaavat mitäkin IFC-tyyppiä. Kun piirustuskonventio pysyy samana, kaikki sen pohjalta tehdyt piirustukset kääntyvät samalla logiikalla ilman manuaalista työtä.</p>
+    <p>Mappaus määritetään kerran: mitkä tasonnimet vastaavat mitäkin IFC-tyyppiä. Sen jälkeen saman konvention piirustukset kääntyvät automaattisesti.</p>
   </div>
 
   <div class="project-section">
     <h2>Miksi tein tämän</h2>
-    <p>Tuli vastaan tilanteita joissa DXF-pohjaisia piirustuksia piti saada IFC-muotoon tarkastusta varten. Manuaalisesti se on hidasta ja virhealtista — sama asia pitää tehdä uudelleen joka kerta kun piirustus päivittyy. Automaatio ratkaisee molemmat ongelmat.</p>
-    <p>Tämä projekti opetti myös IFC4:n rakenteen käytännössä: miten elementtityypit, hierarkia ja geometriaesitys toimivat. Se tausta oli hyödyllinen kun myöhemmin rakensin Ordinaten.</p>
+    <p>Tuli tilanteita joissa DXF-pohjaisia piirustuksia piti saada IFC-muotoon tarkastusta varten. Manuaalisesti se vie aikaa ja kun piirustus päivittyy, sama työ alkaa alusta.</p>
+    <p>Samalla opin IFC4:n rakenteen käytännössä: miten elementtityypit, hierarkia ja geometriaesitys toimivat. Se tuli hyvin tarpeeseen kun myöhemmin rakensin Ordinaten.</p>
   </div>
 
   <div class="project-section">
