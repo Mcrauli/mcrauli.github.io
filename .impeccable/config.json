@@ -40,6 +40,78 @@
         ],
         "createdAt": "2026-11-04T16:54:15.618Z",
         "reason": "Intentional design: shared style.css cyberpunk-neon design system"
+      },
+      {
+        "rule": "undersized-ui-text",
+        "value": "*",
+        "files": [
+          "projects/ordinate.html"
+        ],
+        "createdAt": "2026-11-04T16:55:12.100Z",
+        "reason": "Inherited from design system style.css; same values present in main index.html without issue"
+      },
+      {
+        "rule": "pulsing-dot",
+        "value": "*",
+        "files": [
+          "projects/ordinate.html"
+        ],
+        "createdAt": "2026-11-04T16:55:12.376Z",
+        "reason": "Intentional: availability pulse indicates active job search status"
+      },
+      {
+        "rule": "undersized-ui-text",
+        "value": "*",
+        "files": [
+          "projects/dxf2ifc.html"
+        ],
+        "createdAt": "2026-11-04T16:55:12.650Z",
+        "reason": "Inherited from design system style.css; same values present in main index.html without issue"
+      },
+      {
+        "rule": "pulsing-dot",
+        "value": "*",
+        "files": [
+          "projects/dxf2ifc.html"
+        ],
+        "createdAt": "2026-11-04T16:55:12.928Z",
+        "reason": "Intentional: availability pulse indicates active job search status"
+      },
+      {
+        "rule": "undersized-ui-text",
+        "value": "*",
+        "files": [
+          "projects/autocad-lisp.html"
+        ],
+        "createdAt": "2026-11-04T16:55:13.213Z",
+        "reason": "Inherited from design system style.css; same values present in main index.html without issue"
+      },
+      {
+        "rule": "pulsing-dot",
+        "value": "*",
+        "files": [
+          "projects/autocad-lisp.html"
+        ],
+        "createdAt": "2026-11-04T16:55:13.488Z",
+        "reason": "Intentional: availability pulse indicates active job search status"
+      },
+      {
+        "rule": "undersized-ui-text",
+        "value": "*",
+        "files": [
+          "projects/tyokalusivusto.html"
+        ],
+        "createdAt": "2026-11-04T16:55:13.774Z",
+        "reason": "Inherited from design system style.css; same values present in main index.html without issue"
+      },
+      {
+        "rule": "pulsing-dot",
+        "value": "*",
+        "files": [
+          "projects/tyokalusivusto.html"
+        ],
+        "createdAt": "2026-11-04T16:55:14.056Z",
+        "reason": "Intentional: availability pulse indicates active job search status"
       }
     ]
   }
