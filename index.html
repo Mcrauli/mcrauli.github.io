@@ -154,8 +154,8 @@
         <h3>Opin nopeasti ja vien työt loppuun</h3>
         <p>
           Python, AutoCAD LISP, IFC ja web olen oppinut rakentamalla
-          todellisia tarpeita varten. Käyttöliittymä, asennus ja ohjeistus
-          kuuluvat kokonaisuuteen — en jätä työtä puolivalmiiksi.
+          todellisia tarpeita varten. Käyttöliittymä, asennus, dokumentaatio —
+          kaikki kuuluu samaan pakettiin.
         </p>
       </div>
     </div>
@@ -222,8 +222,8 @@
             <span class="year-badge">2025 →</span>
           </div>
           <h3>Ordinate — Scan-to-BIM / IFC4</h3>
-          <p class="case-line"><span class="case-tag">Ongelma</span> Laserkeilatun pistepilven muuntaminen editoitavaksi arkkitehtimalliksi on hidasta käsityötä: perusrakenteet mallinnetaan taso kerrallaan.</p>
-          <p class="case-line"><span class="case-tag case-tag--hyoty">Hyöty</span> Tunnistaa seinät, ovet, ikkunat, pilarit, palkit ja tilat pistepilvestä. Tuottaa IFC4-mallin, jossa jokaisella elementillä on tyyppi, PropertySetit, määrät ja georeferointi (ETRS-TM35FIN). Valmis tarkasteltavaksi Solibrissa.</p>
+          <p class="case-line"><span class="case-tag">Ongelma</span> Pistepilvestä pitää mallintaa seinät, ovet ja tilat käsin Revitissä. Suuressa kohteessa siihen menee päiviä.</p>
+          <p class="case-line"><span class="case-tag case-tag--hyoty">Hyöty</span> Ordinate lukee pistepilven ja kirjoittaa IFC4:n — oikeat tyypit, PropertySetit, georeferointi. Avautuu suoraan Solibrissa tai Revitissä.</p>
           <div class="tech-chips">
             <span class="chip">Python</span>
             <span class="chip">IFC4</span>
@@ -279,8 +279,8 @@
             <span class="year-badge">2024 →</span>
           </div>
           <h3>DXF/DWG → IFC4 -konvertteri</h3>
-          <p class="case-line"><span class="case-tag">Ongelma</span> CAD-aineiston vienti tietomalliksi on hidasta käsityötä: tasot ja ominaisuudet mapataan erikseen joka kerta.</p>
-          <p class="case-line"><span class="case-tag case-tag--hyoty">Hyöty</span> Automatisoi CAD-tasojen mappauksen IFC4-elementeiksi (IfcWall, IfcDoor, IfcSpace) ominaisuuksineen. Tekee siirtoprosessista toistettavan, tukena tietomallikoordinoinnissa.</p>
+          <p class="case-line"><span class="case-tag">Ongelma</span> CAD-tasojen mappaus IFC:ksi käsin joka kerta — hidasta ja altista virheille.</p>
+          <p class="case-line"><span class="case-tag case-tag--hyoty">Hyöty</span> Python-työnkulku automatisoi mappauksen. Sama aineisto kääntyy samalla logiikalla aina, tuloksena IFC4 Solibriin.</p>
           <div class="tech-chips">
             <span class="chip">Python</span>
             <span class="chip">IfcOpenShell</span>
@@ -334,8 +334,8 @@
             <span class="year-badge">2024 →</span>
           </div>
           <h3>AutoCAD LISP -piirtotyökalut</h3>
-          <p class="case-line"><span class="case-tag">Ongelma</span> Samat piirtovaiheet toistuvat työssä usein: komponentit, tasot ja merkinnät asetetaan käsin joka kerta.</p>
-          <p class="case-line"><span class="case-tag case-tag--hyoty">Hyöty</span> Nopeuttaa suunnittelijan arkea ja pitää piirrosjäljen yhtenäisenä tekijästä riippumatta. Toimii AutoCADissa ja BricsCADissa; mukana oma ribbon-välilehti.</p>
+          <p class="case-line"><span class="case-tag">Ongelma</span> Samat piirtoliikkeet kymmeniä kertoja päivässä. Tasot, komponentit, merkinnät käsin joka kerta.</p>
+          <p class="case-line"><span class="case-tag case-tag--hyoty">Hyöty</span> LISP-komennot hoitavat toistuvat vaiheet. Mukana oma ribbon, toimii AutoCADissa ja BricsCADissa.</p>
           <div class="tech-chips">
             <span class="chip">AutoCAD LISP</span>
             <span class="chip">CAD-automaatio</span>
@@ -406,8 +406,8 @@
             <span class="year-badge">2025 →</span>
           </div>
           <h3>Työkalujen esittelysivusto</h3>
-          <p class="case-line"><span class="case-tag">Ongelma</span> Hyvätkin työkalut jäävät käyttämättä, jos kukaan ei tiedä miten ne toimivat.</p>
-          <p class="case-line"><span class="case-tag case-tag--hyoty">Hyöty</span> Madaltaa kynnystä ottaa työkalut käyttöön ja tukee suunnittelutyötä arjessa.</p>
+          <p class="case-line"><span class="case-tag">Ongelma</span> Työkalu on turha jos ohjetta ei löydy.</p>
+          <p class="case-line"><span class="case-tag case-tag--hyoty">Hyöty</span> Ohje, demo, käyttöönotto samassa paikassa. Ilman frameworkia.</p>
           <div class="tech-chips">
             <span class="chip">HTML / CSS / JS</span>
             <span class="chip">Responsiivinen</span>
@@ -450,20 +450,10 @@
 
       <div class="case-grid">
         <div class="case-block">
-          <h4>Lähtötilanne</h4>
-          <p>Laserkeilaus tuottaa miljoonat pisteet — mutta editoitava arkkitehtimalli puuttuu. Seinät, tilat ja aukot mallinnetaan käsin Revitissä tai ArchiCADissa pistepilven päälle. Suuressa kohteessa tähän menee useita työpäiviä.</p>
+          <p>Rakensin Windows-sovelluksen, joka lukee pistepilven (E57/LAS/LAZ/PLY/PTS), erottaa kalusteet koneoppimisella ja tunnistaa rakenteet. Tuloksena IFC4-tiedosto: seinät, ovet, ikkunat, pilarit, tilat — oikeilla tyypeillä (IfcWallType, IfcDoorType), PropertySeteillä (Pset_WallCommon) ja georeferoinnilla (ETRS-TM35FIN).</p>
         </div>
         <div class="case-block">
-          <h4>Ratkaisu</h4>
-          <p>Rakensin Windows-sovelluksen (Ordinate), joka lukee laserkeilatun pistepilven (E57 / LAS / LAZ / PLY / PTS), erottaa rakenteet kalusteista koneoppimisella ja tunnistaa seinät, lattia, katto, ovet, ikkunat, pilarit, palkit ja tilat automaattisesti. Tuloksena IFC4-tiedosto, jossa jokaisella elementillä on oikea tyyppi (IfcWallType, IfcDoorType, IfcSlabType), PropertySetit (Pset_WallCommon, Pset_SpaceCommon), määrät (Qto_WallBaseQuantities) ja georeferointi (IfcProjectedCRS, ETRS-TM35FIN). Malli asettuu pistepilven päälle koordinaatit täsmäten.</p>
-        </div>
-        <div class="case-block">
-          <h4>Hyöty</h4>
-          <p>Inventointimallin pohja syntyy minuuteissa eikä päivissä. IFC4-malli avautuu suoraan muokattavana Revitissä ja ArchiCADissa, ja se on tarkasteltavissa Solibrissa. Elementtien semantiikka on valmiina: seinät tietävät paksuutensa, tilat pinta-alansa, kaikki ovat oikeita IFC4-tyyppejä eikä pelkkiä geometrioita. Projekti on pre-release-vaiheessa (v0.9.37).</p>
-        </div>
-        <div class="case-block case-block--note">
-          <h4>Avoimuus</h4>
-          <p>Tarkkuus riippuu aineistosta. Nurkkasijaintien poikkeama oikealla keilauksella on tyypillisesti noin 100 mm (molemmat pinnat näkyvissä: paljon pienempi). Ohjelma ilmoittaa itse epävarmat kohdat — niitä ei piiloteta.</p>
+          <p>Inventointimallin pohja syntyy minuuteissa. Malli avautuu suoraan Solibrissa tai Revitissä, elementeillä on semantiikka eikä vain geometria. Pre-release (v0.9.37) — nurkkasijaintien poikkeama on tyypillisesti noin 100 mm oikealla keilauksella, ohjelma ilmoittaa epävarmat kohdat itse.</p>
         </div>
       </div>
 
@@ -490,20 +480,10 @@
 
       <div class="case-grid">
         <div class="case-block">
-          <h4>Lähtötilanne</h4>
-          <p>CAD-aineiston vienti tietomallitarkasteluun on helposti manuaalista työtä. Tasot ja ominaisuudet käydään läpi ja mäpätään käsin joka kierroksella; hidasta ja altista pienille virheille.</p>
+          <p>Python-työnkulku, joka vie DXF/DWG-aineiston IFC4:ksi layer-mappauksen perusteella. IfcOpenShell kirjoittaa elementit oikeilla tyypeillä ja property set -tiedoilla. Avautuu tarkastukseen Solibrissa.</p>
         </div>
         <div class="case-block">
-          <h4>Ratkaisu</h4>
-          <p>Rakensin Python-pohjaisen työnkulun, joka vie DXF/DWG-aineistoa kohti IFC4-koordinaatiomallia. Mappaus nojaa CAD-tasoihin, ja elementeille tuotetaan property set -tyyppistä tietoa. IFC:n kirjoitus hoituu IfcOpenShellillä, ja lopputulos avautuu tarkastettavaksi esimerkiksi Solibrissa.</p>
-        </div>
-        <div class="case-block">
-          <h4>Hyöty</h4>
-          <p>IFC-mallin tekeminen käsin kestäisi tunneja per piirustus — konversioajolla sama valmistuu minuuteissa. Sama aineisto kääntyy samalla logiikalla joka kerta, mikä tekee prosessista toistettavan ja nopeuttaa aineiston siirtoa tietomallikoordinoinnin tarkasteluun.</p>
-        </div>
-        <div class="case-block case-block--note">
-          <h4>Rajaus</h4>
-          <p>Lähdekoodi, mappaussäännöt ja projektikohtaiset asetukset eivät ole julkisia. Työkalu on tehty työympäristössä, joten kuvaan sen tässä yleisellä tasolla.</p>
+          <p>Tunnit manuaalista mappausta per piirustus putoaa minuuteiksi. Sama aineisto kääntyy samalla logiikalla aina.</p>
         </div>
       </div>
 
@@ -529,20 +509,10 @@
 
       <div class="case-grid">
         <div class="case-block">
-          <h4>Lähtötilanne</h4>
-          <p>Sama piirtotyö toistuu suunnittelussa kymmeniä kertoja päivässä. Komponentit, tasot ja merkinnät asetellaan käsin, ja lopputulos vaihtelee hieman tekijän mukaan.</p>
+          <p>Sarja LISP-komentoja, jotka hoitavat toistuvat piirto- ja muokkausvaiheet. Koottu omaan ribbon-välilehteen, asennus yhdellä ajolla. Toimii AutoCADissa ja BricsCADissa.</p>
         </div>
         <div class="case-block">
-          <h4>Ratkaisu</h4>
-          <p>Tein sarjan LISP-komentoja, jotka hoitavat toistuvat piirto- ja muokkausvaiheet valmiiksi. Komennot on koottu omaan ribbon-välilehteen, joten niitä ei tarvitse muistaa ulkoa. Asennus on tehty yhden ajon helpoksi, niin että paketin saa käyttöön myös kollegan koneella, sekä AutoCADissa että BricsCADissa.</p>
-        </div>
-        <div class="case-block">
-          <h4>Hyöty</h4>
-          <p>Yksittäinen elementti piirtyy minuuteista sekunteihin. Kymmenien toistuvien vaiheiden kohdalla kertyy tunneissa laskettavia säästöjä päivässä — ja piirrosjälki pysyy yhtenäisenä tekijästä riippumatta.</p>
-        </div>
-        <div class="case-block case-block--note">
-          <h4>Rajaus</h4>
-          <p>Komentojen tarkkaa sisältöä ja yrityskohtaisia piirtokäytäntöjä en julkaise. Esittelen tässä työkalujen idean ja käytettävyyden, en sisäisiä yksityiskohtia.</p>
+          <p>Yksittäinen elementti piirtyy minuuteista sekunteihin. Piirrosjälki pysyy yhtenäisenä tekijästä riippumatta.</p>
         </div>
       </div>
 
@@ -568,20 +538,10 @@
 
       <div class="case-grid">
         <div class="case-block">
-          <h4>Lähtötilanne</h4>
-          <p>Hyvätkin työkalut jäävät käyttämättä, jos ohjeet ovat hajallaan tai niitä ei löydy. Käyttöönoton kynnys nousee turhaan.</p>
+          <p>Web-pohjainen dokumentaatiosivu: työkalut, ohjeet ja käyttöönotto samassa paikassa. Ilman frameworkia, toimii puhelimella.</p>
         </div>
         <div class="case-block">
-          <h4>Ratkaisu</h4>
-          <p>Kokosin kevyen web-pohjaisen tuki- ja dokumentaatiosivuston, joka esittelee työkalut, ohjeistaa käytön ja kertoo käyttöönoton vaiheet samassa paikassa. Selkeä käyttöliittymä, animoidut esimerkit ja toimii puhelimella. Tehty ilman frameworkia, joten ylläpito on nopeaa.</p>
-        </div>
-        <div class="case-block">
-          <h4>Hyöty</h4>
-          <p>Ohjeet ja työkalut löytyvät yhdestä paikasta selkeässä muodossa. Käyttöönoton kynnys madaltuu, ja sivusto tukee suunnittelutyötä arjessa.</p>
-        </div>
-        <div class="case-block case-block--note">
-          <h4>Rajaus</h4>
-          <p>Sivuston sisältö esitetään tässä yleisellä tasolla. Työkalukohtaiset ohjeet ja sisäiset tiedot eivät kuulu julkiseen esittelyyn.</p>
+          <p>Kynnys ottaa työkalu käyttöön madaltuu kun ohjeen löytää heti.</p>
         </div>
       </div>
 
@@ -602,11 +562,9 @@
       <div class="about-block reveal">
         <h3>Mistä tulen</h3>
         <p>
-          Opiskelen teknistä suunnittelua ja olen päässyt työharjoittelussa
-          näkemään, miten talotekniikan suunnittelijat tekevät arkityönsä:
-          AutoCAD-piirustukset, tietomallit ja IFC-viennit. Sieltä syntyi
-          kiinnostus siihen, miten toistuvaa käsityötä voidaan vähentää
-          automaation avulla.
+          Opiskelen teknistä suunnittelua. Harjoittelujaksolla talotekniikan suunnittelutoimistossa
+          tein Solibri-tarkastuksia yhdistelmämalleista ja sovitin pistepilveä
+          inventointimalliin Cintoossa. Sieltä tuli kiinnostus IFC-automaatioon.
         </p>
       </div>
       <div class="about-block reveal">
@@ -624,11 +582,9 @@
           Haluan tehdä IFC- ja tietomallikoordinointia: mallien tarkastusta,
           tietosisällön laadunvarmistusta ja tietomalliprosessien kehittämistä.
           Olen rakentanut Ordinaten alusta alkaen yksin, joten ymmärrän IFC4:n
-          rakennetta, PropertySeteistä georeferointiin, kooditasolla.
+          rakennetta kooditasolla — PropertySeteistä georeferointiin.
           Sen lisäksi olen automatisoinut CAD–BIM-siirtoa DXF/DWG-konvertterin
-          ja AutoCAD LISP -työkalujen kautta. Yhdistelmä koodaustaitoa,
-          IFC-kirjoitusta ja käytännön suunnittelun tuntemusta on se, millä
-          haluan tuottaa arvoa.
+          ja AutoCAD LISP -työkalujen kautta.
         </p>
       </div>
     </div>
