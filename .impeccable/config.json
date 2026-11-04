@@ -4,6 +4,43 @@
     "ignoreFiles": [
       "index.html"
     ],
-    "ignoreValues": []
+    "ignoreValues": [
+      {
+        "rule": "dark-glow",
+        "value": "*",
+        "files": [
+          "projects/ordinate.html"
+        ],
+        "createdAt": "2026-11-04T16:53:55.726Z",
+        "reason": "Intentional design: shared style.css uses glows as part of the cyberpunk-neon design system confirmed by user"
+      },
+      {
+        "rule": "dark-glow",
+        "value": "*",
+        "files": [
+          "projects/dxf2ifc.html"
+        ],
+        "createdAt": "2026-11-04T16:54:15.463Z",
+        "reason": "Intentional design: shared style.css cyberpunk-neon design system"
+      },
+      {
+        "rule": "dark-glow",
+        "value": "*",
+        "files": [
+          "projects/autocad-lisp.html"
+        ],
+        "createdAt": "2026-11-04T16:54:15.511Z",
+        "reason": "Intentional design: shared style.css cyberpunk-neon design system"
+      },
+      {
+        "rule": "dark-glow",
+        "value": "*",
+        "files": [
+          "projects/tyokalusivusto.html"
+        ],
+        "createdAt": "2026-11-04T16:54:15.618Z",
+        "reason": "Intentional design: shared style.css cyberpunk-neon design system"
+      }
+    ]
   }
 }
