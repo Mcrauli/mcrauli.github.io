@@ -8,6 +8,66 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../style.css?v=21">
+<style>
+  .project-hero { max-width: 720px; margin-bottom: 3rem; }
+  .project-hero h1 {
+    font-family: 'Exo 2', sans-serif;
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0.75rem 0 1rem;
+    text-wrap: balance;
+  }
+  .project-hero .lede {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--text-dim);
+    max-width: 620px;
+  }
+  .project-section { max-width: 720px; margin-bottom: 2.5rem; }
+  .project-section h2 {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--cyan);
+    margin: 0 0 0.75rem;
+  }
+  .project-section p {
+    color: var(--text-dim);
+    line-height: 1.7;
+    margin: 0 0 0.75rem;
+  }
+  .output-list {
+    list-style: none; padding: 0; margin: 0.75rem 0;
+    display: flex; flex-direction: column; gap: 0.5rem;
+  }
+  .output-list li {
+    display: flex; gap: 0.75rem; align-items: baseline;
+    color: var(--text-dim); font-size: 0.95rem; line-height: 1.5;
+  }
+  .output-list li::before {
+    content: "→"; color: var(--cyan);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem; flex-shrink: 0;
+  }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.75rem; }
+  .tag {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 4px;
+    padding: 0.2rem 0.6rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--text-dim);
+  }
+  .back-link {
+    color: var(--cyan); font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem; text-decoration: none; display: inline-block; margin-top: 1rem;
+  }
+  .back-link:hover { color: var(--magenta); }
+</style>
 </head>
 <body>
 
@@ -22,18 +82,48 @@
   </div>
 </nav>
 
-<main class="container" id="main-content" style="padding-top: 100px;">
-  <section class="section">
-    <div class="project-meta" style="margin-bottom: 1rem;">
+<main class="container" id="main-content" style="padding-top: 100px; padding-bottom: 4rem;">
+
+  <div class="project-hero">
+    <div class="project-meta" style="margin-bottom: 0.75rem;">
       <span class="status-badge">WEB</span>
       <span class="year-badge">2025 →</span>
     </div>
-    <h2>Työkalujen <span class="accent">esittelysivusto</span></h2>
+    <h1>Työkalujen <span class="accent">esittelysivusto</span></h1>
+    <p class="lede">
+      Työkalu on turha jos käyttöohje ei löydy. Tein web-sivuston joka kokoaa CAD/BIM-työkalut, niiden ohjeet ja käyttöönoton samaan paikkaan. Ilman frameworkia, toimii puhelimella.
+    </p>
+  </div>
 
-    <p style="max-width: 640px; color: var(--text-dim); font-size: 0.95rem;">Tarkempi kuvaus tulossa.</p>
+  <div class="project-section">
+    <h2>Mitä sivusto sisältää</h2>
+    <p>Dokumentaatiosivu joka palvelee kahta tarkoitusta: uuden käyttäjän perehdytys ja vanhan käyttäjän referenssi. Rakenne on tehty niin että tiedon löytää nopeasti ilman selailua.</p>
 
-    <a href="../index.html#tyot" style="color: var(--cyan); font-family: 'JetBrains Mono', monospace; font-size: 0.85rem;">← Takaisin töihin</a>
-  </section>
+    <ul class="output-list">
+      <li>Työkalukohtaiset ohjeet asennuksesta käyttöön</li>
+      <li>Lyhyet demot tyypillisimmistä työnkuluista</li>
+      <li>Versiotiedot ja muutokset</li>
+      <li>Toimii mobiilissa ilman erillistä mobiiliversiota</li>
+    </ul>
+  </div>
+
+  <div class="project-section">
+    <h2>Miksi tein tämän</h2>
+    <p>Kun jakaa työkaluja muille, dokumentaatio on se osa johon törmää ensimmäiseksi. README ei aina riitä, varsinkin jos käyttäjä ei ole tekijä. Sivusto antaa paremman ensikohtaamisen kuin tekstitiedosto.</p>
+    <p>Samalla se oli hyvä syy opetella tekemään sivuja kunnolla: responsiivinen ilman kirjastoja, selkeä typografia, looginen rakenne. Nämä taidot olivat hyödyllisiä myös tätä portfoliota tehdessä.</p>
+  </div>
+
+  <div class="project-section">
+    <h2>Tekninen stack</h2>
+    <div class="tag-row">
+      <span class="tag">HTML</span>
+      <span class="tag">CSS</span>
+      <span class="tag">JavaScript</span>
+    </div>
+  </div>
+
+  <a href="../index.html#tyot" class="back-link">← Takaisin töihin</a>
+
 </main>
 
 </body>
