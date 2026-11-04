@@ -10,7 +10,7 @@ Henkilökohtainen portfolio-sivu työnhakua varten. Plain HTML/CSS/JS, GitHub Pa
 ## Lauri (fakta-taso joka näkyy sivulla)
 
 - Teknisen suunnittelun opiskelija
-- Ollut työharjoittelussa — **firman nimeä EI mainita sivulla** (IP-rajaus)
+- Ollut työharjoittelussa Radika Oy:llä — nimi **saa mainita** harjoittelukontekstissa (Mistä tulen -osio), mutta ei projekteissa tai lähdekoodissa
 - Tavoittelee teknisen suunnittelun / tietomallikoordinoinnin harjoittelu- tai junior-paikkaa
 - Tekee CAD/BIM-automaatiota: Python, AutoCAD LISP, web
 - Harrastaa: auton/moottorin rakentaminen, 3D-tulostus (Stratasys), tekniikka
@@ -20,9 +20,9 @@ Henkilökohtainen portfolio-sivu työnhakua varten. Plain HTML/CSS/JS, GitHub Pa
 
 Projektit on tehty työympäristössä / liittyvät firman sisäisiin prosesseihin.
 Sivulla EI saa olla: lähdekoodia, GitHub-repo-linkkejä, asiakasdataa,
-firman nimiä, tarkkoja sisäisiä yksityiskohtia. Projektit esitellään
-yleisellä tasolla (idea → toteutus → lopputulos). Näyttöinä screenshotit
-tai SVG-mockupit, ei koodia. "Radika Oy" ei saa esiintyä missään.
+tarkkoja sisäisiä yksityiskohtia. Projektit esitellään yleisellä tasolla
+(idea → toteutus → lopputulos). Näyttöinä screenshotit tai SVG-mockupit,
+ei koodia. "Radika Oy" saa mainita harjoittelukontekstissa, ei projekteissa.
 
 ## Visuaalinen identiteetti — cyberpunk-neon
 
