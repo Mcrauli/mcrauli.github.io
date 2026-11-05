@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mcrauli.github.io/sitemap.xml
+Sitemap: https://rekolalauri.fi/sitemap.xml
