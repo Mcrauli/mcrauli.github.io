@@ -9,6 +9,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../style.css?v=21">
 <style>
+  :root {
+    --surface-subtle: rgba(255,255,255,0.04);
+    --border-subtle: rgba(255,255,255,0.08);
+    --surface-dim: rgba(255,255,255,0.03);
+    --border-dim: rgba(255,255,255,0.07);
+    --divider: rgba(255,255,255,0.2);
+    --cyan-border: rgba(5,217,232,0.3);
+    --amber-bg: rgba(255,217,61,0.08);
+    --amber-border: rgba(255,217,61,0.2);
+  }
   .project-hero {
     max-width: 720px;
     margin-bottom: 3rem;
@@ -53,8 +63,8 @@
     margin: 1rem 0;
   }
   .pipeline-step {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.08);
+    background: var(--surface-subtle);
+    border: 1px solid var(--border-subtle);
     border-radius: 4px;
     padding: 0.3rem 0.7rem;
     font-family: 'JetBrains Mono', monospace;
@@ -63,11 +73,11 @@
     white-space: nowrap;
   }
   .pipeline-step.highlight {
-    border-color: rgba(0,230,230,0.3);
+    border-color: var(--cyan-border);
     color: var(--cyan);
   }
   .pipeline-arrow {
-    color: rgba(255,255,255,0.2);
+    color: var(--divider);
     font-size: 0.85rem;
   }
   .stat-row {
@@ -77,8 +87,8 @@
     margin: 1rem 0;
   }
   .stat-card {
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(255,255,255,0.07);
+    background: var(--surface-dim);
+    border: 1px solid var(--border-dim);
     border-radius: 6px;
     padding: 1rem;
   }
@@ -125,8 +135,8 @@
     margin-top: 0.75rem;
   }
   .tag {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.08);
+    background: var(--surface-subtle);
+    border: 1px solid var(--border-subtle);
     border-radius: 4px;
     padding: 0.2rem 0.6rem;
     font-family: 'JetBrains Mono', monospace;
@@ -160,8 +170,8 @@
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    background: rgba(255,170,0,0.08);
-    border: 1px solid rgba(255,170,0,0.2);
+    background: var(--amber-bg);
+    border: 1px solid var(--amber-border);
     border-radius: 6px;
     padding: 0.5rem 0.8rem;
     font-size: 0.85rem;
