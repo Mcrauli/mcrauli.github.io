@@ -186,7 +186,7 @@
 
   <div class="project-section">
     <h2>Mitä se tekee</h2>
-    <p>Syötteenä pistepilvi (E57, LAS, LAZ, PLY tai PTS), ulos IFC4 ja DXF. Ohjelma tunnistaa sisätilasta rakenteet ja suodattaa kalusteet ja tavarat pois ennen kuin mallintaa mitään.</p>
+    <p>Sisään menee pistepilvi (E57, LAS, LAZ, PLY tai PTS), ulos tulee IFC4 ja DXF. Ohjelma tunnistaa sisätilasta rakenteet ja suodattaa kalusteet pois ennen kuin mallintaa mitään.</p>
 
     <ul class="output-list">
       <li>Seinät paksuuksineen ja materiaaleineen, nimettyinä (VS / KVS / US + paksuus)</li>
@@ -222,7 +222,7 @@
       <span class="pipeline-step highlight">IFC4 + DXF</span>
     </div>
 
-    <p>Seinädetektio perustuu 2D-tiheysmaskiin: pilvi leikataan vyötärökorkeudelta, rakennetaan rasteri ja etsitään ääriviivat. Tästä saadaan seinäakselit ja paksuudet. Paksuus lukitaan lopussa raakapilvestä mitattuun arvoon ja snäpätään lähimpään rakennusstandardiin (66/92/120/150/200/250/300 mm), mutta mitattu arvo tallentuu IFC-propertyyn.</p>
+    <p>Seinädetektio perustuu 2D-tiheysmaskiin: pilvi leikataan vyötärökorkeudelta, siitä rakennetaan rasteri ja etsitään ääriviivat. Tulos on seinäakselit ja paksuudet. Paksuus mitataan lopussa raakapilvestä ja snäpätään lähimpään rakennusstandardiin (66/92/120/150/200/250/300 mm), mutta raakamitattu arvo tallentuu myös IFC-propertyyn.</p>
 
     <p>Monta keilausta samasta kerroksesta voi ajaa yhdistettynä — ohjelma hoitaa rekisteröinnin ja tuottaa yhden mallin.</p>
   </div>
@@ -250,12 +250,12 @@
       </div>
     </div>
 
-    <p>Nurkkasijaintitarkkuus heikkenee oikealla datalla (~100 mm) verrattuna puhtaaseen dataan (~4 mm). Syy on yksipuolinen keilaus: seinien toinen pinta jää usein näkemättä, ja kalusteet peittävät nurkat. Ei algoritmin vika vaan datan fyysinen raja.</p>
+    <p>Nurkat osuvat oikealla datalla noin 100 mm:n tarkkuudella, puhtaalla datalla 4 mm. Syy on yksipuolinen keilaus: toinen pinta jää näkemättä ja kalusteet peittävät nurkat. Ei algoritmin vika vaan datan fyysinen raja.</p>
   </div>
 
   <div class="project-section">
     <h2>Tekninen stack</h2>
-    <p>Windows-sovellus, GUI ja CLI. Jaellaan Inno Setup -installerina, päivittää itsensä per-user-asennuksella ilman admin-oikeuksia.</p>
+    <p>Windows-sovellus, GUI ja CLI. Installer on Inno Setup, päivittyy itsekseen per-user-asennuksella ilman admin-oikeuksia.</p>
     <div class="tag-row">
       <span class="tag">Python 3.12</span>
       <span class="tag">open3d</span>
